@@ -1,9 +1,6 @@
 # base node image
 FROM node:18-bullseye-slim as base
 
-# install openssl and sqlite3 for prisma
-RUN apt-get update && apt-get install -y openssl sqlite3
-
 # install all node_modules, including dev
 FROM base as deps
 
@@ -31,11 +28,6 @@ WORKDIR /app/
 
 COPY --from=deps /app/node_modules /app/node_modules
 
-# schema doesn't change much so these will stay cached
-ADD prisma /app/prisma
-
-RUN npx prisma generate
-
 # app code changes all the time
 ADD . .
 RUN npm run build
@@ -43,7 +35,6 @@ RUN npm run build
 # build smaller image for running
 FROM base
 
-ENV DATABASE_URL="file:/app/data/sqlite.db"
 ENV PORT="3000"
 ENV NODE_ENV="production"
 
@@ -51,7 +42,6 @@ RUN mkdir /app/
 WORKDIR /app/
 
 COPY --from=production-deps /app/node_modules /app/node_modules
-COPY --from=build /app/node_modules/.prisma /app/node_modules/.prisma
 COPY --from=build /app/build /app/build
 
 ADD . .
