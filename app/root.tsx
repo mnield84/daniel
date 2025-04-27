@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import "./styles/tailwind.css";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -68,6 +69,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
       {stack && (
         <pre className="w-full p-4 overflow-x-auto">
           <code>{stack}</code>
+          <p className="text-red-500">test</p>
         </pre>
       )}
     </main>
