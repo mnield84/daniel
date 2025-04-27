@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -43,7 +45,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <Outlet />
+    </div>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
