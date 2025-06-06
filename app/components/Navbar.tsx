@@ -1,87 +1,40 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import IorganbioLogo from "../assets/Iorganbio.svg";
+import MenuButtonIcon from "../assets/menu-button.svg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="absolute top-0 left-0 w-full z-20 bg-transparent font-poppins">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-8 py-12">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-gray-800">
-                iORGANBIO
-              </span>
+              <img
+                src={IorganbioLogo}
+                alt="iORGANBIO Logo"
+                className="h-8 w-auto filter brightness-0 invert"
+              />
             </Link>
           </div>
 
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Right side: Partner With Us and Menu button */}
+          <div className="flex items-center space-x-6">
             <Link
-              to="/"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+              to="/partner"
+              className="text-pink-300 text-17px underline font-poppins decoration-2 decoration-pink-300 underline-offset-4 hover:text-pink-200 transition"
+              style={{ paddingBottom: 2 }}
             >
-              Home
+              Partner With Us
             </Link>
-            <Link
-              to="/about"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Services
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="flex items-center gap-2 px-6 py-4 rounded-full bg-[#2A202A] text-white text-lg font-medium focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
             >
-              <span className="sr-only">Open main menu</span>
-              {!isMenuOpen ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              )}
+              <img src={MenuButtonIcon} alt="Menu" className="h-4 w-3" />
+              Menu
             </button>
           </div>
         </div>
@@ -89,29 +42,29 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-black/80">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
             >
               About
             </Link>
             <Link
               to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
             >
               Services
             </Link>
             <Link
               to="/contact"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
             >
               Contact
             </Link>
