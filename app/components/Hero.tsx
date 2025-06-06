@@ -24,7 +24,7 @@ const Hero = () => {
           <br />
           of the Future
         </h1>
-        <p className="text-gray-200 text-lg md:text-xl text-center max-w-2xl mb-8">
+        <p className="text-gray-200 text-lg md:text-xl text-center max-w-4xl mb-8">
           iOrganBio's CellForge™ Platform transforms the way we create human
           cells—enabling scalable, reproducible, and intelligent cell
           manufacturing to cure chronic diseases.
