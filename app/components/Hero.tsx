@@ -17,7 +17,7 @@ const Hero = () => {
         <img
           src={CellImage}
           alt="Cell"
-          className="w-72 md:w-96 mb-8 drop-shadow-2xl"
+          className="w-150px md:w-120 drop-shadow-2xl"
         />
         <h1 className="text-white text-84px md:text-6xl font-medium text-center leading-tight mb-6 font-poppins">
           Engineering the Cells
