@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import CellForgeSection from "./components/CellForgeSection";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -49,6 +50,7 @@ export default function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <CellForgeSection />
       <Outlet />
     </div>
   );
