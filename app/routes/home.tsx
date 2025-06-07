@@ -2,6 +2,8 @@ import type { Route } from "./+types/home";
 import SlidingCardsSection from "../components/SlidingCardsSection";
 import CellForgeSection from "~/components/CellForgeSection";
 import Hero from "~/components/Hero";
+import PartnersSection from "../components/PartnersSection";
+import TeamSection from "../components/TeamSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,6 +18,8 @@ export default function Home() {
       <Hero />
       <CellForgeSection />
       <SlidingCardsSection />
+      <PartnersSection />
+      <TeamSection />
     </>
   );
 }
