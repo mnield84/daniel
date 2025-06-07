@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ComponentSvg from "./assets/Component.svg";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -32,6 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href={ComponentSvg} />
         <Meta />
         <Links />
       </head>

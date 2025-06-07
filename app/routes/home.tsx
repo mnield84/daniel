@@ -8,7 +8,7 @@ import FutureCellTherapiesSection from "../components/FutureCellTherapiesSection
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
+    { title: "iORGANBIO" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
