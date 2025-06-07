@@ -7,8 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import CellForgeSection from "./components/CellForgeSection";
+import Footer from "./components/Footer";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -50,6 +49,7 @@ export default function App() {
     <div className="min-h-screen">
       <Navbar />
       <Outlet />
+      <Footer />
     </div>
   );
 }
