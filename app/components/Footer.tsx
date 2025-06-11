@@ -14,12 +14,13 @@ const Footer = () => {
         </div>
         {/* Center: Contact Info */}
         <div className="mb-8 md:mb-0 md:w-1/3 flex flex-col gap-2 text-lg font-medium text-black text-center">
-          <span>(316) 555-0116</span>
           <span>contact@iorganbio.com</span>
           <span>
-            8502 Preston Rd. Inglewood,
+            701 W Main St. Inglewood,
             <br />
-            Maine 98380
+            Suite 200
+            <br />
+            Durham NC 27701
           </span>
         </div>
         {/* Right: Links */}

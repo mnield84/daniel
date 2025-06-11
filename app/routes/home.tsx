@@ -5,6 +5,7 @@ import Hero from "~/components/Hero";
 import PartnersSection from "../components/PartnersSection";
 import TeamSection from "../components/TeamSection";
 import FutureCellTherapiesSection from "../components/FutureCellTherapiesSection";
+import ContactSection from "../components/ContactSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -21,6 +22,7 @@ export default function Home() {
       <SlidingCardsSection />
       <PartnersSection />
       <TeamSection />
+      <ContactSection />
       <FutureCellTherapiesSection />
     </>
   );

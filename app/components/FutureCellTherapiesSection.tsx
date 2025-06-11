@@ -7,13 +7,13 @@ const FutureCellTherapiesSection = () => {
       <div className="z-10 flex flex-col items-center justify-center w-full px-4">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-[#4B2A4B] text-4xl md:text-6xl font-medium text-center leading-tight mb-4 max-w-[1100px]">
-            Let's Build the Future of Cell Therapies Together
+            CellForge is your partner in programmable biology.
           </h2>
         </div>
         <p className="text-[black] opacity-60 text-lg md:text-xl text-center max-w-4xl mb-10">
           Whether you're pioneering new treatments, advancing diagnostics, or
-          investing in the next biotech platform — CellForge is your partner in
-          programmable biology.
+          investing in the next biotech platform — Let's Build the Future of
+          Cell Therapies Together
         </p>
         <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
           <a

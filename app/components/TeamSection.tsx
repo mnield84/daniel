@@ -10,12 +10,12 @@ const team = [
     image: Avatar3,
   },
   {
-    name: "Prof. Jamie Lee",
+    name: "Prof. Shuibing Chen",
     title: "Chief Scientist",
     image: Avatar4,
   },
   {
-    name: "Dr. Riley Carter",
+    name: "Prof. Xiling Shen",
     title: "Chief Technologist",
     image: Avatar5,
   },
