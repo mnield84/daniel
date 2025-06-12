@@ -1,10 +1,12 @@
 import React from "react";
 
-// Import partner logo
+// Import partner logos
 import fullstackedLogo from "../assets/partners/Fullstacked-Terasaki-Institute.png";
+import firststarLogo from "../assets/partners/firststar.png";
 
 const partners = [
   { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
+  { src: firststarLogo, alt: "First Star" },
 ];
 
 const PartnersSection = () => {
@@ -19,13 +21,21 @@ const PartnersSection = () => {
         Collaborating with industry-leading research organizations
       </h2>
       <div className="flex flex-col gap-8 w-full items-center">
-        <div className="flex flex-row justify-center w-full">
-          <img
-            src={partners[0].src}
-            alt={partners[0].alt}
-            className="max-h-15 grayscale opacity-80 hover:opacity-100 transition duration-200"
-            style={{ objectFit: "contain", width: "auto", maxWidth: "300px" }}
-          />
+        <div className="flex flex-row justify-center gap-16 w-full items-center">
+          {partners.map((partner, index) => (
+            <img
+              key={index}
+              src={partner.src}
+              alt={partner.alt}
+              className="grayscale opacity-80 hover:opacity-100 transition duration-200"
+              style={{
+                objectFit: "contain",
+                width: "auto",
+                maxWidth: "300px",
+                height: index === 1 ? "150px" : "80px", // Make First Star logo larger
+              }}
+            />
+          ))}
         </div>
       </div>
       {/* Bottom border */}

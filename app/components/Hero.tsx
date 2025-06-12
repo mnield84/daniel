@@ -29,12 +29,18 @@ const Hero = () => {
           cells—enabling scalable, reproducible, and intelligent cell
           manufacturing to cure chronic diseases.
         </p>
-        <Link
-          to="/cellforge"
+        <a
+          href="#cellforge"
           className="px-8 py-3 border-b-2 border-gray-200 text-white text-base font-medium tracking-wide hover:border-indigo-400 transition"
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .getElementById("cellforge")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           EXPLORE CELLFORGE
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ const CellForgeSection = () => {
         backgroundRepeat: "no-repeat",
         backgroundColor: "white",
       }}
+      id="cellforge"
     >
       <div className="relative z-10 max-w-6xl mx-auto text-left">
         <p className="text-sm md:text-base text-gray-500 mb-8 font-medium tracking-wide uppercase">

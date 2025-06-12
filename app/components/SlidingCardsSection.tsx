@@ -28,8 +28,8 @@ const SlidingCardsSection = () => {
   return (
     <section className="w-full py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-[64px] max-w-5xl font-medium text-[#4B2A4B] mb-4 font-poppins">
-          CellForge Digitizes the Development of Human Cells
+        <h2 className="text-3xl md:text-[60px] max-w-7xl font-medium text-[#4B2A4B] mb-4 font-poppins">
+          CellForge Digitizes the Development and Manufacturing of Human Cells
         </h2>
         <p className="text-gray-500 text-base md:text-lg mb-10 max-w-4xl">
           A first-of-its-kind platform that merges AI prediction, biological
