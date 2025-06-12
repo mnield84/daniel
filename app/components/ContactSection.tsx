@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import bgImage from "../assets/Rectangle-11.png";
 import PaperIcon from "../assets/paper.svg";
 
@@ -11,6 +11,65 @@ const subjects = [
 ];
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/contact@iorganbio.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          fullname: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <section
       id="contact"
@@ -39,8 +98,7 @@ const ContactSection = () => {
             {/* Right: Form */}
             <form
               className="flex-1 bg-transparent flex flex-col gap-6 max-w-xl"
-              action="https://formsubmit.co/contact@iorganbio.com"
-              method="POST"
+              onSubmit={handleSubmit}
             >
               <div className="flex flex-col gap-2">
                 <label
@@ -56,6 +114,9 @@ const ContactSection = () => {
                   className="bg-transparent border-b border-white/40 focus:border-pink-300 outline-none py-2 px-1 text-white placeholder-white/60"
                   placeholder=""
                   autoComplete="name"
+                  value={formData.fullname}
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -72,6 +133,9 @@ const ContactSection = () => {
                   className="bg-transparent border-b border-white/40 focus:border-pink-300 outline-none py-2 px-1 text-white placeholder-white/60"
                   placeholder=""
                   autoComplete="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -84,10 +148,12 @@ const ContactSection = () => {
                 <select
                   id="subject"
                   className="bg-transparent border-b border-white/40 focus:border-pink-300 outline-none py-2 px-1 text-white appearance-none"
-                  defaultValue=""
+                  value={formData.subject}
+                  onChange={handleChange}
                   name="subject"
+                  required
                 >
-                  <option value="" disabled hidden>
+                  <option value="" disabled>
                     Select a subject
                   </option>
                   {subjects.map((s) => (
@@ -110,12 +176,28 @@ const ContactSection = () => {
                   className="bg-transparent border-b border-white/40 focus:border-pink-300 outline-none py-2 px-1 text-white placeholder-white/60 resize-none"
                   placeholder=""
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
               </div>
+              {submitStatus === "success" && (
+                <div className="text-green-400 text-sm">
+                  Thank you for your message! We'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="text-red-400 text-sm">
+                  There was an error sending your message. Please try again.
+                </div>
+              )}
               <div className="flex justify-end mt-4">
                 <button
                   type="submit"
-                  className="flex flex-col items-center justify-center bg-pink-200 hover:bg-pink-300 transition w-32 h-32 rounded-full shadow-lg group focus:outline-none"
+                  disabled={isSubmitting}
+                  className={`flex flex-col items-center justify-center bg-pink-200 hover:bg-pink-300 transition w-32 h-32 rounded-full shadow-lg group focus:outline-none ${
+                    isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   <img
                     src={PaperIcon}
@@ -123,9 +205,7 @@ const ContactSection = () => {
                     className="w-8 h-8 mb-2 group-hover:scale-110 transition"
                   />
                   <span className="text-[#4C294E] text-[16px] font-medium">
-                    Send
-                    <br />
-                    Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </span>
                 </button>
               </div>
