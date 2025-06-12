@@ -13,6 +13,7 @@ const subjects = [
 const ContactSection = () => {
   return (
     <section
+      id="contact"
       className="relative w-full min-h-[80vh] flex items-center justify-center font-poppins overflow-hidden"
       style={{
         backgroundImage: `url(${bgImage})`,

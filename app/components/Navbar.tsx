@@ -23,9 +23,15 @@ const Navbar = () => {
           {/* Right side: Partner With Us and Menu button */}
           <div className="flex items-center space-x-6">
             <Link
-              to="/partner"
+              to="#partner"
               className="text-pink-300 text-17px underline font-poppins decoration-2 decoration-pink-300 underline-offset-4 hover:text-pink-200 transition"
               style={{ paddingBottom: 2 }}
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Partner With Us
             </Link>
@@ -65,6 +71,13 @@ const Navbar = () => {
             <Link
               to="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
             >
               Contact
             </Link>

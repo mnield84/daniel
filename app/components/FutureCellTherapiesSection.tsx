@@ -17,8 +17,14 @@ const FutureCellTherapiesSection = () => {
         </p>
         <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
           <a
-            href="#"
+            href="#contact"
             className="px-10 py-4 rounded-full bg-[#4B2A4B] text-white text-lg font-light shadow-md hover:bg-[#6d5a7b] transition"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Partner With Us
           </a>
