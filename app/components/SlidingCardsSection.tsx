@@ -6,7 +6,7 @@ import group3 from "../assets/Group3.svg";
 const cards = [
   {
     step: "STEP 1",
-    title: "Define target cells",
+    title: "Define target cells ",
     text: (
       <ul className="list-disc pl-4 text-left">
         <li>Select from IORGANBIO's in-vivo Functional Human Cell Atlas</li>
