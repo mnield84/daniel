@@ -1,46 +1,42 @@
 import { Link } from "react-router";
-import bgImage from "../assets/BG_02.png";
-import CellImage from "../assets/Component.svg";
+import desktopBg from "../assets/BG_02-03.png";
+import mobileBg from "../assets/Rectangle-50.png";
 
 const Hero = () => {
   return (
-    <div
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden font-poppins"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="absolute inset-0 w-full h-full bg-black opacity-60 z-0" />
-      <div className="relative z-10 flex flex-col items-center justify-center w-full px-4">
-        <img
-          src={CellImage}
-          alt="Cell"
-          className="w-150px md:w-120 drop-shadow-2xl"
-        />
-        <h1 className="text-white text-84px md:text-6xl font-medium text-center leading-tight mb-6 font-poppins">
-          Engineering the Cells
-          <br />
-          of the Future
+    <div className="relative min-h-screen flex flex-col items-center md:items-end justify-center md:justify-end overflow-hidden font-poppins">
+      {/* Desktop Background */}
+      <div
+        className="absolute inset-0 w-full h-full hidden md:block"
+        style={{
+          backgroundImage: `url(${desktopBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Mobile Background */}
+      <div
+        className="absolute inset-0 w-full h-full block md:hidden"
+        style={{
+          backgroundImage: `url(${mobileBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Purple Overlay */}
+      <div className="absolute inset-0 w-full h-full bg-[#4B256A] opacity-50 z-0" />
+
+      <div className="relative z-10 flex flex-col items-center md:items-start justify-center w-full px-4 md:pb-25 md:px-8 max-w-7xl mx-auto">
+        <h1 className="text-white text-4xl md:text-[84px] font-medium text-left leading-tight mb-6 md:mb-8">
+          Supplying the Cells to Improve the Human Condition
         </h1>
-        <p className="text-gray-200 text-lg md:text-xl text-center max-w-4xl mb-8">
+        <p className="text-gray-200 text-base md:text-xl text-left max-w-3xl md:max-w-[444px]">
           iOrganBio's CellForge™ Platform transforms the way we create human
           cells—enabling scalable, reproducible, and intelligent cell
           manufacturing to cure chronic diseases.
         </p>
-        <a
-          href="#cellforge"
-          className="px-8 py-3 border-b-2 border-gray-200 text-white text-base font-medium tracking-wide hover:border-indigo-400 transition"
-          onClick={(e) => {
-            e.preventDefault();
-            document
-              .getElementById("cellforge")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          EXPLORE CELLFORGE
-        </a>
       </div>
     </div>
   );

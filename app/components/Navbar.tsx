@@ -11,11 +11,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-8 py-12">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link to="/" className="shrink-0 flex items-center">
               <img
                 src={IorganbioLogo}
                 alt="iORGANBIO Logo"
-                className="h-8 w-auto filter brightness-0 invert"
+                className="w-[200px] md:w-auto h-8 filter brightness-0 invert"
               />
             </Link>
           </div>
@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             <Link
               to="#partner"
-              className="text-pink-300 text-17px underline font-poppins decoration-2 decoration-pink-300 underline-offset-4 hover:text-pink-200 transition"
+              className="hidden md:block text-pink-300 text-17px underline font-poppins decoration-2 decoration-pink-300 underline-offset-4 hover:text-pink-200 transition"
               style={{ paddingBottom: 2 }}
               onClick={(e) => {
                 e.preventDefault();
@@ -37,10 +37,10 @@ const Navbar = () => {
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center gap-2 px-6 py-4 rounded-full bg-[#2A202A] text-white text-lg font-medium focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
+              className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#2A202A] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
             >
               <img src={MenuButtonIcon} alt="Menu" className="h-4 w-3" />
-              Menu
+              <span className="hidden md:inline ml-2">Menu</span>
             </button>
           </div>
         </div>
