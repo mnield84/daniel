@@ -1,26 +1,51 @@
 import React from "react";
-import cellSvg from "../assets/fi_2286243.svg";
+import group1 from "../assets/Group.svg";
+import group2 from "../assets/Group2.svg";
+import group3 from "../assets/Group3.svg";
 
 const cards = [
   {
     step: "STEP 1",
-    title: "Define the Target Cell",
-    text: "A specific therapeutic cell type, like pancreatic beta cells or retinal cells. CellForge starts with a clear biological outcome.",
+    title: "Define target cells",
+    text: (
+      <ul className="list-disc pl-4 text-left">
+        <li>Select from IORGANBIO's in-vivo Functional Human Cell Atlas</li>
+        <li>Provide cells or cell characteristics</li>
+      </ul>
+    ),
+    icon: group1,
+    alt: "Define target cells icon",
   },
   {
     step: "STEP 2",
-    title: "Measure Starting Cells",
-    text: 'Cell state is measured in real-time using advanced profiling tools. This helps establish a precise biological "starting point."',
+    title: "Characterize biological state of starting cells",
+    text: null,
+    icon: group2,
+    alt: "Characterize starting cells icon",
   },
   {
     step: "STEP 3",
-    title: "AI Predicts Transformation",
-    text: 'Our proprietary AI maps the best chemical and environmental "path" to guide cells from start to target state — using millions of data points.',
+    title: "AI-agent guides differentiation towards target cell state",
+    text: (
+      <ul className="list-disc pl-4 text-left">
+        <li>Continuous feedback loop</li>
+        <li>Fully automated 3D incubators</li>
+      </ul>
+    ),
+    icon: group3,
+    alt: "AI guides differentiation icon",
   },
   {
     step: "STEP 4",
-    title: "Execute in Smart Incubators",
-    text: "The protocol is executed in automated, AI-guided incubators — where chemical and environmental signals are adjusted in real time.",
+    title: "AI-agent guides differentiation towards target cell state",
+    text: (
+      <ul className="list-disc pl-4 text-left">
+        <li>Continuous feedback loop</li>
+        <li>Fully automated 3D incubators</li>
+      </ul>
+    ),
+    icon: group1,
+    alt: "AI guides differentiation icon",
   },
 ];
 
@@ -40,7 +65,7 @@ const SlidingCardsSection = () => {
           {cards.map((card, idx) => (
             <div
               key={card.step}
-              className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col items-center snap-start shadow-md"
+              className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col items-center snap-start shadow-md md:min-w-[350px] md:max-w-[380px]"
             >
               <span className="text-xs text-[#7a5c8a] font-semibold mb-2 tracking-widest">
                 {card.step}
@@ -48,8 +73,12 @@ const SlidingCardsSection = () => {
               <h3 className="text-xl font-semibold text-[#4B2A4B] mb-4 text-center">
                 {card.title}
               </h3>
-              <img src={cellSvg} alt="Cells" className="w-20 h-20 mb-4" />
-              <p className="text-[#6d5a7b] text-sm text-center">{card.text}</p>
+              <img src={card.icon} alt={card.alt} className="w-20 h-20 mb-4" />
+              {card.text ? (
+                <div className="text-[#6d5a7b] text-sm text-center w-full">
+                  {card.text}
+                </div>
+              ) : null}
             </div>
           ))}
         </div>
