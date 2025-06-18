@@ -1,7 +1,7 @@
 import React from "react";
 import group1 from "../assets/Group.svg";
 import group2 from "../assets/Group2.svg";
-import group3 from "../assets/Group3.svg";
+import group3 from "../assets/group3.svg";
 
 const cards = [
   {
