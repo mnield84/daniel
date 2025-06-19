@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import desktopBg from "../assets/BG_02-03.png";
 import mobileBg from "../assets/Rectangle-50.png";
-import videoBg from "../assets/video-bg.mov";
 
 const Hero = () => {
   return (
@@ -9,7 +8,7 @@ const Hero = () => {
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src={videoBg}
+        src="/video-bg.mov"
         autoPlay
         loop
         muted
