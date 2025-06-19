@@ -78,12 +78,12 @@ const Navbar = () => {
                 Home
               </a>
               <a
-                href="#about"
+                href="#cellforge"
                 className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                 onClick={(e) => {
                   e.preventDefault();
                   document
-                    .getElementById("about")
+                    .getElementById("cellforge")
                     ?.scrollIntoView({ behavior: "smooth" });
                   setIsMenuOpen(false);
                 }}
@@ -91,17 +91,17 @@ const Navbar = () => {
                 About
               </a>
               <a
-                href="#services"
+                href="#partner"
                 className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                 onClick={(e) => {
                   e.preventDefault();
                   document
-                    .getElementById("services")
+                    .getElementById("partner")
                     ?.scrollIntoView({ behavior: "smooth" });
                   setIsMenuOpen(false);
                 }}
               >
-                Services
+                Partners
               </a>
               <a
                 href="#contact"
