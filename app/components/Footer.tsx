@@ -37,18 +37,6 @@ const Footer = () => {
           >
             Partner with Us
           </a>
-          <a
-            href="#privacy"
-            className="hover:underline inline-flex self-center md:self-end text-black"
-          >
-            Privacy Policy
-          </a>
-          <a
-            href="#terms"
-            className="hover:underline inline-flex self-center md:self-end text-black"
-          >
-            Terms & Condition
-          </a>
         </div>
       </div>
       {/* Logo and tagline */}
@@ -58,8 +46,9 @@ const Footer = () => {
           alt="iORGANBIO Logo"
           className="w-full max-w-5xl m-auto"
         />
-        <p className="text-xl md:text-2xl font-medium mt-4 md:mt-2 text-center md:text-right text-black">
-          Engineering the Future of Cell Therapies
+        <p className="text-xl md:text-2xl font-medium mt-4 md:mt-2 text-center text-black">
+          We are bringing engineering precision to the complexity of cellular
+          biology
         </p>
       </div>
     </footer>

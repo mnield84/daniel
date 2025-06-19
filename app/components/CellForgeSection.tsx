@@ -51,8 +51,8 @@ const CellForgeSection = () => {
               </span>
               <span>
                 Cell manufacturing is performed in an AI-guided 3D incubator
-                system allowing quasi-continuous genomic readouts, enabling
-                real-time feedback and automated process optimization.
+                system allowing quasi-continuous transcriptomics readouts,
+                enabling real-time feedback and automated process optimization.
               </span>
             </div>
             <div className="flex items-start gap-3">
