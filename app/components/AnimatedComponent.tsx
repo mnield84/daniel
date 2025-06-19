@@ -25,7 +25,7 @@ const animationVariants = {
     visible: { opacity: 1 },
   },
   fadeInUp: {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   },
   fadeInLeft: {
