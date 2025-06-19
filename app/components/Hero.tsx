@@ -12,7 +12,10 @@ const Hero = () => {
         muted
         playsInline
       >
-        <source src="/video-bg.mov" type="video/mp4" />
+        <source
+          src="https://dl.dropboxusercontent.com/scl/fi/zq2s4dghtpqzozj2q8l5c/video-bg.mov?rlkey=fytkiklb4mcpsyq1ox7lu9r97&st=qhbc5iu2"
+          type="video/mp4"
+        />
       </video>
 
       {/* Mobile Background */}
