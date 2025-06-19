@@ -2,6 +2,7 @@ import React from "react";
 import cellIcon from "../assets/unique/cell.svg";
 import bubbleIcon from "../assets/unique/bubble.svg";
 import scopeIcon from "../assets/unique/scope.svg";
+import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 const cards = [
   {
@@ -34,16 +35,23 @@ const cards = [
 export default function UniqueSection() {
   return (
     <section className="py-20 bg-white w-full font-poppins">
-      <h2 className="text-4xl md:text-5xl font-medium text-center text-[#47284D] mb-4">
-        What Makes iOrganBio Unique
-      </h2>
-      <p className="text-center text-[#2A222A] mb-12 max-w-2xl mx-auto text-lg">
-        No more black box biology. No more waiting 6 months for cell access.
-        This is programmable cell manufacturing.
-      </p>
+      <AnimatedComponent animation="fadeInUp" className="text-center">
+        <h2 className="text-4xl md:text-5xl font-medium text-center text-[#47284D] mb-4">
+          What Makes iOrganBio Unique
+        </h2>
+        <p className="text-center text-[#2A222A] mb-12 max-w-2xl mx-auto text-lg">
+          No more black box biology. No more waiting 6 months for cell access.
+          This is programmable cell manufacturing.
+        </p>
+      </AnimatedComponent>
+
       <div className="flex flex-col items-center gap-0 w-full">
         {/* Top row */}
-        <div className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-0 md:mb-[-40px] z-10 w-full">
+        <StaggerContainer
+          animation="scaleIn"
+          staggerDelay={0.1}
+          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-0 md:mb-[-40px] z-10 w-full"
+        >
           {cards.slice(0, 3).map((card) => (
             <div
               key={card.title}
@@ -66,9 +74,14 @@ export default function UniqueSection() {
               </p>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
+
         {/* Bottom row, staggered */}
-        <div className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mt-0 w-full">
+        <StaggerContainer
+          animation="scaleIn"
+          staggerDelay={0.1}
+          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mt-0 w-full"
+        >
           {cards.slice(3).map((card) => (
             <div
               key={card.title}
@@ -91,7 +104,7 @@ export default function UniqueSection() {
               </p>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

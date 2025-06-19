@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 // Import partner logos
 import fullstackedLogo from "../assets/partners/terasaki.png";
@@ -21,11 +22,19 @@ const PartnersSection = () => {
     >
       {/* Top border */}
       <div className="w-full max-w-[300px] sm:max-w-[700px] lg:max-w-[1000px] h-px bg-gray-200 mb-20 mt-2" />
-      <h2 className="text-center text-gray-400 text-[18px] font-medium mb-12 tracking-wide uppercase">
-        Already Powering the World's Leading Biopharma
-      </h2>
+
+      <AnimatedComponent animation="fadeInUp">
+        <h2 className="text-center text-gray-400 text-[18px] font-medium mb-12 tracking-wide uppercase">
+          Already Powering the World's Leading Biopharma
+        </h2>
+      </AnimatedComponent>
+
       <div className="flex flex-col gap-8 w-full items-center">
-        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 w-full items-center">
+        <StaggerContainer
+          animation="fadeInUp"
+          staggerDelay={0.1}
+          className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 w-full items-center"
+        >
           {partners.map((partner, index) => (
             <img
               key={index}
@@ -40,7 +49,7 @@ const PartnersSection = () => {
               }}
             />
           ))}
-        </div>
+        </StaggerContainer>
       </div>
       {/* Bottom border */}
       <div className="w-full max-w-[300px] sm:max-w-[700px] lg:max-w-[1000px] h-px bg-gray-200 mt-20 mb-2" />
