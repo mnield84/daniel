@@ -37,10 +37,10 @@ const Navbar = () => {
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#2A202A] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
+              className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-white/10 text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
             >
               <img src={MenuButtonIcon} alt="Menu" className="h-4 w-3" />
-              <span className="hidden md:inline ml-2">Menu</span>
+              <span className="hidden md:inline ml-2 text-white">Menu</span>
             </button>
           </div>
         </div>
