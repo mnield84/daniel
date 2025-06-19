@@ -55,13 +55,13 @@ export default function UniqueSection() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg ring-2 ring-[#E5D8F3] mb-4">
+              <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
                 <img src={card.icon} alt="" className="w-10 h-10" />
               </div>
               <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F]">
                 {card.title}
               </h3>
-              <p className="text-center text-[#3A2C3F] text-base">
+              <p className="text-center text-[#3A2C3F] text-base h-[62px] max-w-[345px]">
                 {card.desc}
               </p>
             </div>
@@ -80,13 +80,13 @@ export default function UniqueSection() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg ring-2 ring-[#E5D8F3] mb-4">
+              <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
                 <img src={card.icon} alt="" className="w-10 h-10" />
               </div>
               <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F]">
                 {card.title}
               </h3>
-              <p className="text-center text-[#3A2C3F] text-base">
+              <p className="text-center text-[#3A2C3F] text-base h-[62px] max-w-[345px]">
                 {card.desc}
               </p>
             </div>
