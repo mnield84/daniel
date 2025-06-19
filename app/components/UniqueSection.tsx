@@ -34,7 +34,7 @@ const cards = [
 
 export default function UniqueSection() {
   return (
-    <section className="bg-white w-full font-poppins">
+    <section className="py-20 bg-white w-full font-poppins">
       <h2 className="text-4xl md:text-5xl font-medium text-center text-[#47284D] mb-4">
         What Makes iOrganBio Unique
       </h2>
@@ -42,16 +42,16 @@ export default function UniqueSection() {
         No more black box biology. No more waiting 6 months for cell access.
         This is programmable cell manufacturing.
       </p>
-      <div className="flex flex-col items-center gap-0">
+      <div className="flex flex-col items-center gap-0 w-full">
         {/* Top row */}
-        <div className="flex flex-row justify-center gap-6 mb-[-40px] z-10">
+        <div className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-0 md:mb-[-40px] z-10 w-full">
           {cards.slice(0, 3).map((card) => (
             <div
               key={card.title}
-              className="unique-hexagon flex flex-col items-center justify-center py-8 px-6 w-64 h-64"
+              className="unique-hexagon flex flex-col items-center justify-center py-10 px-6 w-full max-w-[410px] h-[457px]"
               style={{
                 backgroundImage: `url(${hexaSvg})`,
-                backgroundSize: "cover",
+                backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
@@ -69,15 +69,14 @@ export default function UniqueSection() {
           ))}
         </div>
         {/* Bottom row, staggered */}
-        <div className="flex flex-row justify-center gap-6 mt-0">
-          <div className="w-28" /> {/* Spacer for staggering */}
+        <div className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mt-0 w-full">
           {cards.slice(3).map((card) => (
             <div
               key={card.title}
-              className="unique-hexagon flex flex-col items-center justify-center py-8 px-6 w-64 h-64"
+              className="unique-hexagon flex flex-col items-center justify-center py-10 px-6 w-full max-w-[410px] h-[457px]"
               style={{
                 backgroundImage: `url(${hexaSvg})`,
-                backgroundSize: "cover",
+                backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
