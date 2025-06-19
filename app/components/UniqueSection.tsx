@@ -2,7 +2,6 @@ import React from "react";
 import cellIcon from "../assets/unique/cell.svg";
 import bubbleIcon from "../assets/unique/bubble.svg";
 import scopeIcon from "../assets/unique/scope.svg";
-import hexaSvg from "../assets/Hexa-svg.svg";
 
 const cards = [
   {
@@ -50,7 +49,7 @@ export default function UniqueSection() {
               key={card.title}
               className="unique-hexagon flex flex-col items-center justify-center py-10 px-6 w-full max-w-[410px] h-[457px]"
               style={{
-                backgroundImage: `url(${hexaSvg})`,
+                backgroundImage: "url('/Hexa-svg.svg')",
                 backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -75,7 +74,7 @@ export default function UniqueSection() {
               key={card.title}
               className="unique-hexagon flex flex-col items-center justify-center py-10 px-6 w-full max-w-[410px] h-[457px]"
               style={{
-                backgroundImage: `url(${hexaSvg})`,
+                backgroundImage: "url('/Hexa-svg.svg')",
                 backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
