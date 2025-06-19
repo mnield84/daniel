@@ -73,7 +73,7 @@ const SlidingCardsSection = () => {
               <h3 className="text-xl font-semibold text-[#4B2A4B] mb-4 text-center">
                 {card.title}
               </h3>
-              <img src={card.icon} alt={card.alt} className="w-20 h-20 mb-4" />
+              <img src={card.icon} alt={card.alt} className="w-20 h-20 my-15" />
               {card.text ? (
                 <div className="text-[#6d5a7b] text-sm text-center w-full">
                   {card.text}

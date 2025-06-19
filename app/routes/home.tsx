@@ -6,6 +6,8 @@ import PartnersSection from "../components/PartnersSection";
 import TeamSection from "../components/TeamSection";
 import FutureCellTherapiesSection from "../components/FutureCellTherapiesSection";
 import ContactSection from "../components/ContactSection";
+import UniqueSection from "../components/UniqueSection";
+import DownloadSection from "../components/DownloadSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -20,8 +22,10 @@ export default function Home() {
       <Hero />
       <CellForgeSection />
       <SlidingCardsSection />
-      <PartnersSection />
+      <UniqueSection />
       <TeamSection />
+      <PartnersSection />
+      <DownloadSection />
       <ContactSection />
       <FutureCellTherapiesSection />
     </>
