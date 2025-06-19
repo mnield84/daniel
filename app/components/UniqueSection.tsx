@@ -55,23 +55,26 @@ export default function UniqueSection() {
           {cards.slice(0, 3).map((card) => (
             <div
               key={card.title}
-              className="unique-hexagon flex flex-col items-center justify-center py-10 px-6 w-full max-w-[410px] h-[457px]"
-              style={{
-                backgroundImage: "url('/Hexa-svg.svg')",
-                backgroundSize: "100% 100%",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
+              className="relative flex-none w-[410px] h-[443px]"
             >
-              <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
-                <img src={card.icon} alt="" className="w-10 h-10" />
+              <div
+                className="absolute inset-0 bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: "url('/Hexa-svg.svg')",
+                  backgroundSize: "410px 443px",
+                }}
+              />
+              <div className="relative flex flex-col items-center justify-center h-full px-6 py-10">
+                <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
+                  <img src={card.icon} alt="" className="w-10 h-10" />
+                </div>
+                <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F] w-full">
+                  {card.title}
+                </h3>
+                <p className="text-center text-[#3A2C3F] text-base h-[62px] w-full flex items-center justify-center px-8">
+                  {card.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F]">
-                {card.title}
-              </h3>
-              <p className="text-center text-[#3A2C3F] text-base h-[62px] max-w-[345px]">
-                {card.desc}
-              </p>
             </div>
           ))}
         </StaggerContainer>
@@ -85,23 +88,26 @@ export default function UniqueSection() {
           {cards.slice(3).map((card) => (
             <div
               key={card.title}
-              className="unique-hexagon flex flex-col items-center justify-center py-10 px-6 w-full max-w-[410px] h-[457px]"
-              style={{
-                backgroundImage: "url('/Hexa-svg.svg')",
-                backgroundSize: "100% 100%",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
+              className="relative flex-none w-[410px] h-[443px]"
             >
-              <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
-                <img src={card.icon} alt="" className="w-10 h-10" />
+              <div
+                className="absolute inset-0 bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: "url('/Hexa-svg.svg')",
+                  backgroundSize: "410px 443px",
+                }}
+              />
+              <div className="relative flex flex-col items-center justify-center h-full px-6 py-10">
+                <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
+                  <img src={card.icon} alt="" className="w-10 h-10" />
+                </div>
+                <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F] w-full">
+                  {card.title}
+                </h3>
+                <p className="text-center text-[#3A2C3F] text-base h-[62px] w-full flex items-center justify-center px-8">
+                  {card.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F]">
-                {card.title}
-              </h3>
-              <p className="text-center text-[#3A2C3F] text-base h-[62px] max-w-[345px]">
-                {card.desc}
-              </p>
             </div>
           ))}
         </StaggerContainer>
