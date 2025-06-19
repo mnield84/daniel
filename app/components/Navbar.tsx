@@ -48,39 +48,75 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/80">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
-            >
-              Services
-            </Link>
-            <Link
-              to="/contact"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-indigo-200 hover:bg-white/10"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" });
-                setIsMenuOpen(false);
-              }}
-            >
-              Contact
-            </Link>
+        <div className="fixed inset-0 z-50 flex justify-end">
+          {/* Overlay */}
+          <div
+            className="absolute inset-0 bg-black/60"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          {/* Sliding menu */}
+          <div className="relative w-3/4 max-w-xs bg-black/90 h-full shadow-lg transform transition-transform duration-300 translate-x-0">
+            <div className="px-4 pt-8 pb-6 space-y-2">
+              <button
+                className="absolute top-4 right-4 text-white text-2xl focus:outline-none"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                &times;
+              </button>
+              <a
+                href="#home"
+                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("home")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setIsMenuOpen(false);
+                }}
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("about")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setIsMenuOpen(false);
+                }}
+              >
+                About
+              </a>
+              <a
+                href="#services"
+                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setIsMenuOpen(false);
+                }}
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
+                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setIsMenuOpen(false);
+                }}
+              >
+                Contact
+              </a>
+            </div>
           </div>
         </div>
       )}
