@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import IorganbioLogo from "../assets/Iorganbio.svg";
 import MenuButtonIcon from "../assets/menu-button.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,79 +48,106 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-50">
-          {/* Overlay */}
-          <div
-            className="absolute inset-0 bg-black/80 z-50"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          {/* Sliding menu */}
-          <div className="absolute right-0 top-0 w-3/4 max-w-xs bg-black h-full shadow-lg z-60">
-            <div className="px-4 pt-8 pb-6 space-y-2">
-              <button
-                className="absolute top-4 right-4 text-white text-2xl focus:outline-none"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label="Close menu"
-              >
-                &times;
-              </button>
-              <a
-                href="#home"
-                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("home")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                Home
-              </a>
-              <a
-                href="#cellforge"
-                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("cellforge")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                About
-              </a>
-              <a
-                href="#partner"
-                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("partner")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                Partners
-              </a>
-              <a
-                href="#contact"
-                className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                Contact
-              </a>
-            </div>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-50">
+            {/* Overlay */}
+            <div
+              className="absolute inset-0 bg-black/80 z-50"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            {/* Sliding menu */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{
+                type: "tween",
+                duration: 0.4,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
+              className="absolute right-0 top-0 w-3/4 max-w-xs bg-black h-full shadow-lg z-60 flex flex-col items-start"
+            >
+              {/* Animated Logo with Ripple Effect */}
+              <div className="relative w-full flex justify-start items-center h-18 mb-4">
+                <motion.div
+                  initial={{ x: -40, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  className="relative z-10"
+                >
+                  <img
+                    src={IorganbioLogo}
+                    alt="iORGANBIO Logo"
+                    className="w-[160px] h-10 ml-4"
+                  />
+                </motion.div>
+              </div>
+              <div className="px-4 pt-2 pb-6 space-y-2 w-full">
+                <button
+                  className="absolute top-4 right-4 text-white text-2xl focus:outline-none"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  &times;
+                </button>
+                <a
+                  href="#home"
+                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("home")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Home
+                </a>
+                <a
+                  href="#cellforge"
+                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("cellforge")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  About
+                </a>
+                <a
+                  href="#partner"
+                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("partner")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Partners
+                </a>
+                <a
+                  href="#contact"
+                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Contact
+                </a>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
