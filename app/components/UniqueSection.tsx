@@ -50,28 +50,28 @@ export default function UniqueSection() {
         <StaggerContainer
           animation="scaleIn"
           staggerDelay={0.1}
-          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-0 md:mb-[-40px] z-10 w-full"
+          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-6 md:mb-[-40px] z-10 w-full"
         >
           {cards.slice(0, 3).map((card) => (
             <div
               key={card.title}
-              className="relative flex-none w-[410px] h-[443px]"
+              className="relative flex-none w-[314px] h-[340px] md:w-[410px] md:h-[443px]"
             >
               <div
-                className="absolute inset-0 bg-no-repeat bg-center"
+                className="absolute inset-0 bg-no-repeat bg-center bg-contain"
                 style={{
                   backgroundImage: "url('/Hexa-svg.svg')",
-                  backgroundSize: "410px 443px",
+                  backgroundSize: "100% 100%",
                 }}
               />
               <div className="relative flex flex-col items-center justify-center h-full px-6 py-10">
                 <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
                   <img src={card.icon} alt="" className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F] w-full">
+                <h3 className="text-xl font-medium text-center mb-0 sm:mb-2 text-[#2D1B2F] w-full">
                   {card.title}
                 </h3>
-                <p className="text-center text-[#3A2C3F] text-base h-[62px] w-full flex items-center justify-center px-8">
+                <p className="text-[14px] sm:text-[16px] text-center text-[#3A2C3F] h-[62px] w-full flex items-center justify-center px-8">
                   {card.desc}
                 </p>
               </div>
@@ -88,23 +88,23 @@ export default function UniqueSection() {
           {cards.slice(3).map((card) => (
             <div
               key={card.title}
-              className="relative flex-none w-[410px] h-[443px]"
+              className="relative flex-none w-[314px] h-[340px] md:w-[410px] md:h-[443px]"
             >
               <div
-                className="absolute inset-0 bg-no-repeat bg-center"
+                className="absolute inset-0 bg-no-repeat bg-center bg-contain"
                 style={{
                   backgroundImage: "url('/Hexa-svg.svg')",
-                  backgroundSize: "410px 443px",
+                  backgroundSize: "100% 100%",
                 }}
               />
               <div className="relative flex flex-col items-center justify-center h-full px-6 py-10">
                 <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
                   <img src={card.icon} alt="" className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-medium text-center mb-2 text-[#2D1B2F] w-full">
+                <h3 className="text-xl font-medium text-center mb-0 sm:mb-2 text-[#2D1B2F] w-full">
                   {card.title}
                 </h3>
-                <p className="text-center text-[#3A2C3F] text-base h-[62px] w-full flex items-center justify-center px-8">
+                <p className="text-[14px] sm:text-[16px] text-center text-[#3A2C3F] text-base h-[62px] w-full flex items-center justify-center px-8">
                   {card.desc}
                 </p>
               </div>
