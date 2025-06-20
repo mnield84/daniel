@@ -31,7 +31,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative z-40 flex flex-col items-center md:items-start justify-center w-full px-4 md:pb-25 md:px-8 max-w-7xl mx-auto">
+      <div className="relative z-18 flex flex-col items-center md:items-start justify-center w-full px-4 md:pb-25 md:px-8 max-w-7xl mx-auto">
         <AnimatedComponent
           animation="fadeInUp"
           delay={0.2}

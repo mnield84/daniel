@@ -48,14 +48,14 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end">
+        <div className="fixed inset-0 z-50">
           {/* Overlay */}
           <div
-            className="absolute inset-0 bg-black/60"
+            className="absolute inset-0 bg-black/80 z-50"
             onClick={() => setIsMenuOpen(false)}
           />
           {/* Sliding menu */}
-          <div className="relative w-3/4 max-w-xs bg-black/90 h-full shadow-lg transform transition-transform duration-300 translate-x-0">
+          <div className="absolute right-0 top-0 w-3/4 max-w-xs bg-black h-full shadow-lg z-60">
             <div className="px-4 pt-8 pb-6 space-y-2">
               <button
                 className="absolute top-4 right-4 text-white text-2xl focus:outline-none"
