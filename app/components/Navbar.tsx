@@ -8,7 +8,12 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-20 bg-transparent font-poppins">
+    <motion.nav
+      initial={{ y: -25, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="absolute top-0 left-0 w-full z-20 bg-transparent font-poppins"
+    >
       <div className="py-4 max-w-7xl mx-auto px-4 sm:px-12 lg:px-8 sm:py-12">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -148,7 +153,7 @@ const Navbar = () => {
           </div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 
