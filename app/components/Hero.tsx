@@ -5,9 +5,12 @@ import AnimatedComponent from "./AnimatedComponent";
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center md:items-end justify-center md:justify-end overflow-hidden font-poppins">
-      {/* Video Background */}
+      {/* Bottom Solid Purple Background */}
+      <div className="absolute inset-0 w-full h-full bg-[#230B37] z-0" />
+
+      {/* Video Background with 30% Opacity */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-10 opacity-10"
         autoPlay
         loop
         muted
@@ -21,7 +24,7 @@ const Hero = () => {
 
       {/* Mobile Background */}
       <div
-        className="absolute inset-0 w-full h-full block md:hidden"
+        className="absolute inset-0 w-full h-full block md:hidden z-20"
         style={{
           backgroundImage: `url(${mobileBg})`,
           backgroundSize: "cover",
@@ -29,10 +32,16 @@ const Hero = () => {
         }}
       />
 
-      {/* Purple Overlay */}
-      <div className="absolute inset-0 w-full h-full bg-[#4B256A] opacity-50 md:opacity-80 z-10" />
+      {/* Gradient Overlay */}
+      <div
+        className="absolute inset-0 w-full h-full z-10 pointer-events-none opacity-50"
+        style={{
+          background:
+            "linear-gradient(0deg, #1B0D1C 0%, rgba(176, 209, 220, 0) 100%)",
+        }}
+      />
 
-      <div className="relative z-10 flex flex-col items-center md:items-start justify-center w-full px-4 md:pb-25 md:px-8 max-w-7xl mx-auto">
+      <div className="relative z-40 flex flex-col items-center md:items-start justify-center w-full px-4 md:pb-25 md:px-8 max-w-7xl mx-auto">
         <AnimatedComponent
           animation="fadeInUp"
           delay={0.2}
