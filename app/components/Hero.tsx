@@ -17,7 +17,7 @@ const Hero = () => {
         playsInline
       >
         <source
-          src="https://dl.dropboxusercontent.com/scl/fi/zq2s4dghtpqzozj2q8l5c/video-bg.mov?rlkey=fytkiklb4mcpsyq1ox7lu9r97&st=qhbc5iu2"
+          src="https://dl.dropboxusercontent.com/scl/fi/5wya6s5fkhbxlqgerja39/nerve-cell-with-biological-dna-background-2025-04-14-00-28-38-utc.mp4?rlkey=j5kau6x1otso3ju6riigmcblc&st=f2v3zivt"
           type="video/mp4"
         />
       </video>
