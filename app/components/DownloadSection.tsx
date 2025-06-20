@@ -37,9 +37,7 @@ export default function DownloadSection() {
     <section className="w-full bg-white font-poppins">
       <div className="relative z-10 flex flex-col w-full max-w-7xl mx-auto px-6 py-10 pb-20 gap-5">
         <h2 className="text-4xl md:text-5xl font-medium text-[#4B2A57] leading-tight">
-          Backed by Data.
-          <br />
-          Reviewed by Scientists.
+          Backed by Pivotal Scientific Research
         </h2>
         <p className="text-[#4B2A57] text-opacity-70">
           Our scientific team is actively publishing the science behind

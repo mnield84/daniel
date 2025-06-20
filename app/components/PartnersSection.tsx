@@ -25,7 +25,7 @@ const PartnersSection = () => {
 
       <AnimatedComponent animation="fadeInUp">
         <h2 className="text-center text-gray-400 text-[18px] font-medium mb-12 tracking-wide uppercase">
-          Already Powering the World's Leading Biopharma
+          OUR INVESTORS AND PARTNERS
         </h2>
       </AnimatedComponent>
 

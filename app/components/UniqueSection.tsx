@@ -13,7 +13,7 @@ const cards = [
   {
     icon: scopeIcon,
     title: "Reproducible",
-    desc: "every batch meets the desired profile",
+    desc: "Every batch meets the desired profile",
   },
   {
     icon: bubbleIcon,
