@@ -22,19 +22,9 @@ const Hero = () => {
         />
       </video>
 
-      {/* Mobile Background */}
-      <div
-        className="absolute inset-0 w-full h-full block md:hidden z-20"
-        style={{
-          backgroundImage: `url(${mobileBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 w-full h-full z-10 pointer-events-none opacity-50"
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-50"
         style={{
           background:
             "linear-gradient(0deg, #1B0D1C 0%, rgba(176, 209, 220, 0) 100%)",
