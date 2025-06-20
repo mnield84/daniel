@@ -34,7 +34,7 @@ const cards = [
 
 export default function UniqueSection() {
   return (
-    <section className="py-20 bg-white w-full font-poppins">
+    <section className="py-12 md:py-20 bg-white w-full font-poppins px-4 sm:px-6 md:px-8">
       <AnimatedComponent animation="fadeInUp" className="text-center">
         <h2 className="text-4xl md:text-5xl font-medium text-center text-[#47284D] mb-4">
           What Makes iOrganBio Unique
@@ -50,7 +50,7 @@ export default function UniqueSection() {
         <StaggerContainer
           animation="scaleIn"
           staggerDelay={0.1}
-          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-6 md:mb-[-40px] z-10 w-full"
+          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mb-6 md:mb-[-40px] z-10 w-full max-w-[1300px]"
         >
           {cards.slice(0, 3).map((card) => (
             <div
@@ -83,7 +83,7 @@ export default function UniqueSection() {
         <StaggerContainer
           animation="scaleIn"
           staggerDelay={0.1}
-          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mt-0 w-full"
+          className="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-6 mt-0 w-full max-w-[860px]"
         >
           {cards.slice(3).map((card) => (
             <div
