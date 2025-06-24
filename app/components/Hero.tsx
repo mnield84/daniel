@@ -10,7 +10,7 @@ const Hero = () => {
 
       {/* Video Background with 30% Opacity */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-10 opacity-20"
+        className="absolute inset-0 w-full h-full object-cover z-10 opacity-25"
         autoPlay
         loop
         muted
