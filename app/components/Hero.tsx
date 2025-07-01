@@ -51,7 +51,7 @@ const Hero = () => {
         >
           <p className="text-gray-200 text-base md:text-xl text-left max-w-3xl md:max-w-[444px]">
             iOrganBio's CellForge™ Platform transforms the way we create human
-            cells—enabling scalable, reproducible, and intelligent cell
+            cells—enabling reproducible, scalable, and intelligent cell
             manufacturing for in vitro modeling and cell therapies.
           </p>
         </AnimatedComponent>
