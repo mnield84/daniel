@@ -28,17 +28,14 @@ const ContactSection = () => {
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch(
-        "https://formsubmit.co/contact@iorganbio.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://formsubmit.co/contact@iorgan.bio", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         setSubmitStatus("success");
