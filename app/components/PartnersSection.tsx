@@ -44,8 +44,8 @@ const PartnersSection = () => {
               style={{
                 objectFit: "contain",
                 width: "auto",
-                maxWidth: "300px",
-                height: "80px",
+                maxWidth: partner.alt === "First Star" ? "400px" : "300px",
+                height: partner.alt === "First Star" ? "120px" : "80px",
               }}
             />
           ))}
