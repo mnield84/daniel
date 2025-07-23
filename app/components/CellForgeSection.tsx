@@ -33,7 +33,7 @@ const CellForgeSection = () => {
             <AnimatedComponent animation="fadeInUp" delay={0.2}>
               <h2 className="text-[2rem] md:text-[2.5rem] font-medium text-[#4B2A4B] mb-6 leading-snug">
                 <span className="font-bold">IORGANBIO's</span> proprietary
-                CellForge™ platform brings engineering precision to the
+                CellForge platform brings engineering precision to the
                 complexity of cellular biology.
               </h2>
             </AnimatedComponent>
