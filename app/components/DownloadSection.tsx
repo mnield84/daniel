@@ -6,29 +6,29 @@ const downloads = [
     title:
       "A Modular Platform for Differentiation of Human PSCs into All Major Ectodermal Lineages",
     subtitle: "Cell Stem Cell, September 2017",
-    href: "#",
+    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(17)30333-8",
   },
   {
     title:
       "A human pluripotent stem cell–based platform to study SARS-CoV-2 tropism and model virus infection in human cells and organoids",
     subtitle: "Cell Stem Cell, July 2020",
-    href: "#",
+    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(20)30282-4",
   },
   {
     title:
       "Identification of SARS-CoV-2 inhibitors using lung and colonic organoids",
     subtitle: "Nature, August 2020",
-    href: "#",
+    href: "https://www.nature.com/articles/s41586-020-2901-9",
   },
   {
     title: "An Immuno-cardiac Model for macrophage-mediated inflammation",
     subtitle: "Circulation research, 2021",
-    href: "#",
+    href: "https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.121.319060",
   },
   {
     title: "Human vascularized macrophage–islet organoids",
     subtitle: "Cell Stem Cell, November 2024",
-    href: "#",
+    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(24)00293-5",
   },
 ];
 
