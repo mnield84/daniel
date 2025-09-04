@@ -12,12 +12,12 @@ const team = [
   },
   {
     name: "Prof. Shuibing Chen",
-    title: "Chief Scientist",
+    title: "Scientific Lead",
     image: Avatar4,
   },
   {
     name: "Prof. Xiling Shen",
-    title: "Chief Technologist",
+    title: "Technology Lead",
     image: Avatar5,
   },
 ];
