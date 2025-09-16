@@ -40,7 +40,6 @@ export default function UniqueSection() {
           What Makes iOrganBio Unique
         </h2>
         <p className="text-center text-[#2A222A] mb-12 max-w-2xl mx-auto text-lg">
-          No more black box biology. No more waiting 6 months for cell access.
           This is programmable cell manufacturing.
         </p>
       </AnimatedComponent>

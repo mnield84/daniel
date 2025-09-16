@@ -28,14 +28,17 @@ const ContactSection = () => {
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch("https://formsubmit.co/contact@iorgan.bio", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://formsubmit.co/partnering@iorgan.bio",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("success");
@@ -80,11 +83,11 @@ const ContactSection = () => {
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto px-6 py-20 gap-12">
         {/* Left: Heading & Text */}
         <div className="flex flex-col md:w-1/2 w-full mb-8 md:mb-0">
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-6">
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-6 text-[#ffffff]">
             Let us supply the exact cells you need
           </h2>
           <div className="flex-1 flex flex-col text-white max-w-xl max-w-[410px]">
-            <p className="text-lg opacity-80">
+            <p className="text-lg opacity-80 text-[#ffffff]">
               We are bringing engineering precision to the complexity of
               cellular biology
             </p>

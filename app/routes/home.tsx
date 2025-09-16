@@ -20,14 +20,14 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <UniqueSection />
       <CellForgeSection />
       <SlidingCardsSection />
-      <UniqueSection />
-      <TeamSection />
       <PartnersSection />
       <DownloadSection />
+      <TeamSection />
       <ContactSection />
-      <FutureCellTherapiesSection />
+      {/* <FutureCellTherapiesSection /> */}
     </>
   );
 }

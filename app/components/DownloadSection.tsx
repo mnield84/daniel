@@ -3,6 +3,23 @@ import arrow from "../assets/arrow.svg";
 
 const downloads = [
   {
+    title: "ChemperturbSeq paper June 24 2025",
+    subtitle: "Shuibing, June 24 2025",
+    href: "https://www.cell.com/cell-stem-cell/abstract/S1934-5909(25)00224-3",
+  },
+  {
+    title:
+      "Induced organoids derived from patients with ulcerative colitis recapitulate colitic reactivity",
+    subtitle: "Nature Communications, January 2021",
+    href: "https://www.nature.com/articles/s41467-020-20351-5",
+  },
+  {
+    title:
+      "Colonic organoids derived from human induced pluripotent stem cells for modeling colorectal cancer and drug testing",
+    subtitle: "Nature Medicine, June 2017",
+    href: "https://www.nature.com/articles/nm.4355",
+  },
+  {
     title:
       "A Modular Platform for Differentiation of Human PSCs into All Major Ectodermal Lineages",
     subtitle: "Cell Stem Cell, September 2017",
@@ -37,7 +54,7 @@ export default function DownloadSection() {
     <section className="w-full bg-white font-poppins">
       <div className="relative z-10 flex flex-col w-full max-w-7xl mx-auto px-6 py-10 pb-20 gap-5">
         <h2 className="text-4xl md:text-5xl font-medium text-[#4B2A57] leading-tight">
-          Backed by Pivotal Scientific Research
+          Back by pivotal, peer-reviewed, scientific research
         </h2>
         <p className="text-[#4B2A57] text-opacity-70">
           Our scientific team is actively publishing the science behind
@@ -48,6 +65,8 @@ export default function DownloadSection() {
             <a
               key={idx}
               href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
               download
               className="flex items-center justify-between border-b border-[#EBE3ED] border-opacity-10 py-8 px-2 group hover:bg-[#F7F5F9] transition-colors"
             >

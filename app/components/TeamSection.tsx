@@ -2,23 +2,35 @@ import React from "react";
 import Avatar3 from "../assets/team/Avatar3.png";
 import Avatar4 from "../assets/team/Avatar4.png";
 import Avatar5 from "../assets/team/Avatar5.png";
+import Philippe from "../assets/team/Philippe.jpg";
+import Jenn from "../assets/team/Jenn.jpg";
 import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 const team = [
   {
     name: "Dr. Daniel Delubac",
-    title: "Chief Executive",
+    title: "Chief Executive Officers",
     image: Avatar3,
   },
   {
     name: "Prof. Shuibing Chen",
-    title: "Scientific Lead",
+    title: "Scientific Lead Officers",
     image: Avatar4,
   },
   {
     name: "Prof. Xiling Shen",
-    title: "Technology Lead",
+    title: "Technology Lead Officers",
     image: Avatar5,
+  },
+  {
+    name: "Jenn Buechel",
+    title: "Operations Lead",
+    image: Jenn,
+  },
+  {
+    name: "Philippe Chemla",
+    title: "CSO",
+    image: Philippe,
   },
 ];
 
