@@ -1,3 +1,11 @@
+node_modules
+build
+.git
+.gitignore
+*.log
+dist
+**/.DS_Store
+site-export*.zip
 .react-router
 build
 node_modules

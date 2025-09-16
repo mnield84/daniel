@@ -1,49 +1,16 @@
-# base node image
-FROM node:18-bullseye-slim as base
-
-# install all node_modules, including dev
-FROM base as deps
-
-RUN mkdir /app/
-WORKDIR /app/
-
-ADD package.json package-lock.json ./
-RUN npm install
-
-# setup production node_modules
-FROM base as production-deps
-
-RUN mkdir /app/
-WORKDIR /app/
-
-COPY --from=deps /app/node_modules /app/node_modules
-ADD package.json package-lock.json ./
-RUN npm prune --omit=dev
-
-# build app
-FROM base as build
-
-RUN mkdir /app/
-WORKDIR /app/
-
-COPY --from=deps /app/node_modules /app/node_modules
-
-# app code changes all the time
-ADD . .
+### Build stage: build static assets
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY . .
 RUN npm run build
 
-# build smaller image for running
-FROM base
-
-ENV PORT="3000"
-ENV NODE_ENV="production"
-
-RUN mkdir /app/
-WORKDIR /app/
-
-COPY --from=production-deps /app/node_modules /app/node_modules
-COPY --from=build /app/build /app/build
-
-ADD . .
-
-CMD ["npm", "start"]
+### Runtime stage: serve with nginx
+FROM nginx:alpine
+ENV PORT=3000
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+# Copy the built static client assets
+COPY --from=build /app/build/client /usr/share/nginx/html
+EXPOSE 3000
+CMD ["nginx", "-g", "daemon off;"]
