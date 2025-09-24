@@ -39,7 +39,11 @@ const Hero = () => {
           className="w-full"
         >
           <h1 className="text-white text-4xl md:text-[84px] font-medium text-left leading-tight mb-6 md:mb-8">
-            Supplying the Cells to Improve the Human Condition
+            The Right Cells.
+            <br />
+            Consistently.
+            <br />
+            At Scale.
           </h1>
         </AnimatedComponent>
 
