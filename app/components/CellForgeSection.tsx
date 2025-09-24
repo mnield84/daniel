@@ -46,37 +46,17 @@ const CellForgeSection = () => {
               className="flex flex-col gap-6 text-[#4B2A4B] text-base md:text-lg"
             >
               <div className="flex items-start gap-3">
-                <span className="mt-1 text-xl" style={{ color: "#4B2A4B" }}>
-                  ◆
-                </span>
-                <span>
-                  Powered by advanced AI algorithms, CellForge integrates the
-                  genetic background and molecular state of both starting and
-                  target cell populations to dynamically tailor cell culture
-                  conditions and differentiation protocols.
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="mt-1 text-xl" style={{ color: "#4B2A4B" }}>
-                  ◆
-                </span>
-                <span>
-                  Cell manufacturing is performed in an AI-guided 3D incubator
-                  system allowing quasi-continuous transcriptomics readouts,
-                  enabling real-time feedback and automated process
-                  optimization.
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="mt-1 text-xl" style={{ color: "#4B2A4B" }}>
-                  ◆
-                </span>
-                <span>
-                  This closed-loop system provides adaptive control throughout
-                  the differentiation process, ensuring unprecedented
-                  reproducibility, scalability, and predictability in generating
-                  highly specialized cell types, tissues, and organoids.
-                </span>
+                iOrganBio is transforming human cell production with CellForge™,
+                its AI-powered platform for consistent, scalable, and
+                intelligent manufacturing of cells and organoids for in vitro
+                modeling and cell therapies. By applying engineering precision
+                to biology, CellForge uses AI and automation to guide cell
+                development and make real-time adjustments that keep production
+                on track and aligned with defined biological profiles. This
+                smart, closed-loop process provides the accuracy, efficiency,
+                and quality partners need to turn scientific ideas into
+                breakthroughs—accelerating disease modeling, regenerative
+                medicine, and drug development.
               </div>
             </StaggerContainer>
           </div>
