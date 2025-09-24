@@ -8,9 +8,9 @@ import indi from "../assets/partners/indi.png";
 import alix from "../assets/partners/alix.png";
 
 const partners = [
-  { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
-  { src: indi, alt: "INDI" },
   { src: firststarLogo, alt: "First Star" },
+  { src: indi, alt: "INDI" },
+  { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
   { src: alix, alt: "Alix" },
 ];
 
