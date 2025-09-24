@@ -25,12 +25,12 @@ const team = [
   },
   {
     name: "Jenn Buechel",
-    title: "Operations Lead",
+    title: "Chief Operating Officer",
     image: Jenn,
   },
   {
     name: "Philippe Chemla",
-    title: "CSO",
+    title: "Chief Business Officer",
     image: Philippe,
   },
 ];
