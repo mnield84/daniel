@@ -75,11 +75,16 @@ const ContactSection = () => {
       id="contact"
       className="relative w-full min-h-[80vh] flex items-center justify-center font-poppins overflow-hidden"
       style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundColor: "#230B37",
       }}
     >
+      {/* Image overlay with opacity on top of solid background */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-40 bg-center bg-cover"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      />
       <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto px-6 py-20 gap-12">
         {/* Left: Heading & Text */}
         <div className="flex flex-col md:w-1/2 w-full mb-8 md:mb-0">
