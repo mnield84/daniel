@@ -46,17 +46,24 @@ const CellForgeSection = () => {
               className="flex flex-col gap-6 text-[#4B2A4B] text-base md:text-lg"
             >
               <div className="flex items-start gap-3">
-                iOrganBio is transforming human cell production with CellForge™,
-                its AI-powered platform for consistent, scalable, and
-                intelligent manufacturing of cells and organoids for in vitro
-                modeling and cell therapies. By applying engineering precision
-                to biology, CellForge uses AI and automation to guide cell
-                development and make real-time adjustments that keep production
-                on track and aligned with defined biological profiles. This
-                smart, closed-loop process provides the accuracy, efficiency,
-                and quality partners need to turn scientific ideas into
-                breakthroughs—accelerating disease modeling, regenerative
-                medicine, and drug development.
+                <p>
+                  iOrganBio is transforming human cell production with
+                  CellForge™, its AI-powered platform for consistent, scalable,
+                  and intelligent manufacturing of cells and organoids for in
+                  vitro modeling and cell therapies.
+                </p>
+                <p>
+                  By applying engineering precision to biology, CellForge uses
+                  AI and automation to guide cell development and make real-time
+                  adjustments that keep production on track and aligned with
+                  defined biological profiles.
+                </p>
+                <p>
+                  This smart, closed-loop process provides the accuracy,
+                  efficiency, and quality partners need to turn scientific ideas
+                  into breakthroughs—accelerating disease modeling, regenerative
+                  medicine, and drug development.
+                </p>
               </div>
             </StaggerContainer>
           </div>
