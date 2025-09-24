@@ -45,7 +45,7 @@ const CellForgeSection = () => {
               staggerDelay={0.15}
               className="flex flex-col gap-6 text-[#4B2A4B] text-base md:text-lg"
             >
-              <div className="flex items-start gap-3">
+              <div className="flex flex-col items-start gap-3">
                 <p>
                   iOrganBio is transforming human cell production with
                   CellForge™, its AI-powered platform for consistent, scalable,
