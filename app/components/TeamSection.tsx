@@ -10,17 +10,17 @@ import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 const team = [
   {
     name: "Dr. Daniel Delubac",
-    title: "Chief Executive Officers",
+    title: "Chief Executive Officer",
     image: Avatar3,
   },
   {
     name: "Prof. Shuibing Chen",
-    title: "Scientific Lead Officers",
+    title: "Senior Scientific Advisor",
     image: Avatar4,
   },
   {
     name: "Prof. Xiling Shen",
-    title: "Technology Lead Officers",
+    title: "Senior Scientific Advisor",
     image: Avatar5,
   },
   {
