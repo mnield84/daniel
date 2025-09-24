@@ -2,9 +2,9 @@ import React from "react";
 import Avatar3 from "../assets/team/Avatar3.png";
 import Avatar4 from "../assets/team/Avatar4.png";
 import Avatar5 from "../assets/team/Avatar5.png";
-// Fallback to existing avatar assets; original photos are missing in repo
-import Philippe from "../assets/team/Avatar4.png";
-import Jenn from "../assets/team/Avatar5.png";
+// Use real team photos
+import Philippe from "../assets/team/philippe.jpg";
+import Jenn from "../assets/team/jenn.jpg";
 import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 const team = [
