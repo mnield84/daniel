@@ -36,6 +36,8 @@ const team = [
 ];
 
 const TeamSection = () => {
+  const firstRow = team.slice(0, 3);
+  const secondRow = team.slice(3);
   return (
     <section className="w-full py-20 pb-0 bg-white flex flex-col items-center font-poppins">
       <div className="max-w-6xl w-full px-4 mx-auto">
@@ -57,15 +59,44 @@ const TeamSection = () => {
             </AnimatedComponent>
           </div>
         </div>
+        {/* Top row: first 3 members */}
         <StaggerContainer
           animation="fadeInUp"
           staggerDelay={0.15}
-          className="flex flex-col md:flex-row gap-8 justify-center items-stretch pb-4 w-full"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-stretch pb-4 w-full"
         >
-          {team.map((member, idx) => (
+          {firstRow.map((member) => (
             <div
               key={member.name}
               className="rounded-2xl p-6 flex flex-col w-full max-w-64 bg-white mx-auto"
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-56 h-56 object-cover rounded-xl mb-6 mx-auto"
+              />
+              <h3 className="text-xl font-semibold text-[#4B2A4B] mb-1 text-center">
+                {member.name}
+              </h3>
+              <p className="text-[black] opacity-70 text-[16px] font-medium mb-2 text-center">
+                {member.title}
+              </p>
+            </div>
+          ))}
+        </StaggerContainer>
+
+        {/* Bottom row: last 2 members with masonry-like stagger */}
+        <StaggerContainer
+          animation="fadeInUp"
+          staggerDelay={0.15}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-stretch w-full md:-mt-12"
+        >
+          {secondRow.map((member, idx) => (
+            <div
+              key={member.name}
+              className={`rounded-2xl p-6 flex flex-col w-full max-w-64 bg-white mx-auto ${
+                idx === 0 ? "md:mt-8" : "md:mt-0"
+              }`}
             >
               <img
                 src={member.image}
