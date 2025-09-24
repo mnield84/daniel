@@ -13,7 +13,12 @@ const Footer = () => {
         </div>
 
         <div className="md:w-1/3 flex flex-col gap-2 text-lg font-medium text-black text-center md:text-center mb-4 md:mb-0">
-          <span>contact@iorganbio.com</span>
+          <a
+            href="mailto:contact@iorgan.bio"
+            className="hover:underline text-black"
+          >
+            contact@iorgan.bio
+          </a>
           <span>
             701 W Main St. Inglewood,
             <br />
