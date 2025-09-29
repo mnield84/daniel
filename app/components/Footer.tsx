@@ -40,18 +40,7 @@ const Footer = () => {
           >
             Partner with Us
           </a>
-          <div
-            id="BambooHR"
-            data-domain="iorganbio.bamboohr.com"
-            data-version="1.0.0"
-            data-departmentId=""
-          ></div>
-          <script
-            src="https://iorganbio.bamboohr.com/js/embed.js"
-            type="text/javascript"
-            async
-            defer
-          ></script>
+
           <a
             href="https://iorganbio.bamboohr.com"
             target="_blank"
@@ -68,6 +57,18 @@ const Footer = () => {
           >
             LinkedIn
           </a>
+          <div
+            id="BambooHR"
+            data-domain="iorganbio.bamboohr.com"
+            data-version="1.0.0"
+            data-departmentId=""
+          ></div>
+          <script
+            src="https://iorganbio.bamboohr.com/js/embed.js"
+            type="text/javascript"
+            async
+            defer
+          ></script>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-8 pb-8 pt-8 flex flex-col gap-4 md:gap-2">
