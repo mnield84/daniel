@@ -40,6 +40,18 @@ const Footer = () => {
           >
             Partner with Us
           </a>
+          <div
+            id="BambooHR"
+            data-domain="iorganbio.bamboohr.com"
+            data-version="1.0.0"
+            data-departmentId=""
+          ></div>
+          <script
+            src="https://iorganbio.bamboohr.com/js/embed.js"
+            type="text/javascript"
+            async
+            defer
+          ></script>
           <a
             href="https://iorganbio.bamboohr.com"
             target="_blank"
