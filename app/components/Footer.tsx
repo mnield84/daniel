@@ -41,14 +41,14 @@ const Footer = () => {
             Partner with Us
           </a>
 
-          <a
+          {/* <a
             href="https://iorganbio.bamboohr.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex self-center md:self-end hover:underline text-black"
           >
             Careers
-          </a>
+          </a> */}
           <a
             href="https://www.linkedin.com/company/iorganbio"
             target="_blank"
