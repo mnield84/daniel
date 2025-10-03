@@ -33,16 +33,16 @@ const PartnersSection = () => {
         </h2>
       </AnimatedComponent>
 
-      <div className="flex flex-col gap-8 w-full items-center">
+      <div className="flex flex-col gap-4 items-center">
         <StaggerContainer
           animation="fadeInUp"
           staggerDelay={0.1}
-          className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2 w-full items-center"
+          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 max-w-[1000px] items-center"
         >
           {partners.slice(0, 5).map((partner, index) => (
             <div
               key={index}
-              className="h-16 sm:h-20 w-[180px] sm:w-[220px] flex items-center justify-center"
+              className="h-16 sm:h-20 w-[180px]  flex items-center justify-center"
             >
               <img
                 src={partner.src}
