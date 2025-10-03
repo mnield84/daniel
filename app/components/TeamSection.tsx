@@ -49,8 +49,7 @@ const TeamSection = () => {
           <div className="flex-2">
             <AnimatedComponent animation="fadeInUp">
               <h2 className="text-3xl md:text-5xl font-medium text-[#4B2A4B] text-left leading-tight">
-                Meet our <br />
-                Founding Team
+                Meet our Team
               </h2>
             </AnimatedComponent>
           </div>
