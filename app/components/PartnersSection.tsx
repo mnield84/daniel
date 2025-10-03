@@ -5,7 +5,7 @@ import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 import fullstackedLogo from "../assets/partners/TerasakiInst.png";
 import firststarLogo from "../assets/partners/FirstStar.png";
 import indi from "../assets/partners/indiebio.png";
-import alix from "../assets/partners/alix.png";
+import alix from "../assets/partners/Alix.png";
 import secondstarLogo from "../assets/partners/2ndF.png";
 import capeFearBiosciencesLogo from "../assets/partners/CapeFearBiocapital.png";
 
