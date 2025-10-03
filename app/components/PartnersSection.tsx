@@ -2,13 +2,17 @@ import React from "react";
 import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 // Import partner logos
-import fullstackedLogo from "../assets/partners/terasaki.png";
-import firststarLogo from "../assets/partners/First-star.png";
-import indi from "../assets/partners/indi.png";
+import fullstackedLogo from "../assets/partners/TerasakiInst.png";
+import firststarLogo from "../assets/partners/FirstStar.png";
+import indi from "../assets/partners/indiebio.png";
 import alix from "../assets/partners/alix.png";
+import secondstarLogo from "../assets/partners/2ndF.png";
+import capeFearBiosciencesLogo from "../assets/partners/CapeFearBiocapital.png";
 
 const partners = [
+  { src: secondstarLogo, alt: "2nd Star" },
   { src: firststarLogo, alt: "First Star" },
+  { src: capeFearBiosciencesLogo, alt: "Cape Fear Biosciences" },
   { src: indi, alt: "INDI" },
   { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
   { src: alix, alt: "Alix" },
@@ -33,21 +37,19 @@ const PartnersSection = () => {
         <StaggerContainer
           animation="fadeInUp"
           staggerDelay={0.1}
-          className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 w-full items-center"
+          className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2 w-full items-center"
         >
           {partners.map((partner, index) => (
-            <img
+            <div
               key={index}
-              src={partner.src}
-              alt={partner.alt}
-              className="grayscale opacity-80 hover:opacity-100 transition duration-200"
-              style={{
-                objectFit: "contain",
-                width: "auto",
-                maxWidth: partner.alt === "First Star" ? "400px" : "300px",
-                height: partner.alt === "First Star" ? "120px" : "80px",
-              }}
-            />
+              className="h-16 sm:h-20 w-[180px] sm:w-[220px] flex items-center justify-center"
+            >
+              <img
+                src={partner.src}
+                alt={partner.alt}
+                className="grayscale opacity-80 hover:opacity-100 transition duration-200 max-h-full max-w-full object-contain"
+              />
+            </div>
           ))}
         </StaggerContainer>
       </div>

@@ -10,7 +10,7 @@ const cards = [
     title: "Define target cells",
     text: (
       <ul className="list-disc pl-4 text-left">
-        <li>Select from IORGANBIO's in vitro Functional Human Cell Atlas</li>
+        <li>Select from IORGANBIO's in-vivo Functional Human Cell Atlas</li>
         <li>Provide cells or cell characteristics</li>
       </ul>
     ),
@@ -90,12 +90,57 @@ const SlidingCardsSection = () => {
           animation="scaleIn"
           staggerDelay={0.15}
           threshold={0.05}
-          className="flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory"
+          className="flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory items-stretch"
         >
-          {cards.map((card, idx) => (
+          <div
+            key="step1-2"
+            className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col snap-start shadow-md md:min-w-[350px] md:max-w-[380px] h-full"
+          >
+            {/* STEP 1 (top half) */}
+            <div className="relative w-full flex-1 flex flex-col">
+              <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest block">
+                {cards[0].step}
+              </span>
+              <h3 className="text-xl font-medium text-[#4B2A4B] mb-3">
+                {cards[0].title}
+              </h3>
+              <img
+                src={cards[0].icon}
+                alt={cards[0].alt}
+                className="w-14 h-14 absolute top-0 right-0 opacity-90"
+              />
+              <div className="text-[#6d5a7b] text-sm">{cards[0].text}</div>
+            </div>
+
+            {/* STEP 2 (bottom half) */}
+            <div className="grid grid-cols-[auto,1fr] gap-4 items-start w-full flex-1 border-t border-[#E2D6E2] pt-6 mt-6">
+              <div className="flex justify-between">
+                <img
+                  src={cards[1].icon}
+                  alt={cards[1].alt}
+                  className="w-12 h-12 mt-1"
+                />
+                <div className="flex flex-col max-w-[200px]">
+                  <span className="text-xs text-[#7a5c8a] tracking-widest block">
+                    {cards[1].step}
+                  </span>
+                  <h4 className="text-lg font-medium text-[#4B2A4B] mb-3">
+                    {cards[1].title}
+                  </h4>
+                </div>
+              </div>
+
+              <div>
+                <div className="text-[#6d5a7b] text-sm">{cards[1].text}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Render the remaining slides (STEP 3, STEP 4, ...) */}
+          {cards.slice(2).map((card) => (
             <div
               key={card.step}
-              className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col items-center snap-start shadow-md md:min-w-[350px] md:max-w-[380px] flex-1 min-h-[400px]"
+              className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col items-center snap-start shadow-md md:min-w-[350px] md:max-w-[380px] flex-1 h-full"
             >
               <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest">
                 {card.step}
