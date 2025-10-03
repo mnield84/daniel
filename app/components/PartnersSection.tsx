@@ -3,7 +3,7 @@ import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 // Import partner logos
 import fullstackedLogo from "../assets/partners/TerasakiInst.png";
-import firststarLogo from "../assets/partners/First-star.png";
+import firststarLogo from "../assets/partners/FirstStar.png";
 import indi from "../assets/partners/indiebio.png";
 import alix from "../assets/partners/Alix.png";
 import secondstarLogo from "../assets/partners/2ndF.png";
