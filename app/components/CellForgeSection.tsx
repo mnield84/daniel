@@ -19,7 +19,7 @@ const CellForgeSection = () => {
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 md:gap-12">
         {/* Intro paragraph full width */}
         <AnimatedComponent animation="fadeIn" delay={0.1}>
-          <p className="text-sm md:text-base text-gray-500 font-medium tracking-wide uppercase mb-0 md:mb-0">
+          <p className="text-[18px]   text-gray-500 font-medium tracking-wide uppercase mb-0 md:mb-0">
             WE ARE ENTERING THE AGE OF
             <br />
             PROGRAMMABLE BIOLOGY.
