@@ -10,12 +10,12 @@ import secondstarLogo from "../assets/partners/2ndF.png";
 import capeFearBiosciencesLogo from "../assets/partners/CapeFearBiocapital.png";
 
 const partners = [
-  { src: secondstarLogo, alt: "2nd Star" },
   { src: firststarLogo, alt: "First Star" },
-  { src: capeFearBiosciencesLogo, alt: "Cape Fear Biosciences" },
   { src: indi, alt: "INDI" },
-  { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
+  { src: capeFearBiosciencesLogo, alt: "Cape Fear Biosciences" },
+  { src: secondstarLogo, alt: "2nd Star" },
   { src: alix, alt: "Alix" },
+  { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
 ];
 
 const PartnersSection = () => {
@@ -39,7 +39,7 @@ const PartnersSection = () => {
           staggerDelay={0.1}
           className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2 w-full items-center"
         >
-          {partners.map((partner, index) => (
+          {partners.slice(0, 5).map((partner, index) => (
             <div
               key={index}
               className="h-16 sm:h-20 w-[180px] sm:w-[220px] flex items-center justify-center"
@@ -51,6 +51,21 @@ const PartnersSection = () => {
               />
             </div>
           ))}
+        </StaggerContainer>
+
+        {/* Second row with last logo centered */}
+        <StaggerContainer
+          animation="fadeInUp"
+          staggerDelay={0.1}
+          className="flex justify-center w-full"
+        >
+          <div className="h-16 sm:h-20 w-[180px] sm:w-[220px] flex items-center justify-center">
+            <img
+              src={partners[5].src}
+              alt={partners[5].alt}
+              className="grayscale opacity-80 hover:opacity-100 transition duration-200 max-h-full max-w-full object-contain"
+            />
+          </div>
         </StaggerContainer>
       </div>
       {/* Bottom border */}
