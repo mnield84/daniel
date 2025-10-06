@@ -24,9 +24,9 @@ export default function Home() {
       {/* <UniqueSection /> */}
       <CellForgeSection />
       <SlidingCardsSection />
+      <CellAtlasSection />
       <PartnersSection />
       <DownloadSection />
-      <CellAtlasSection />
       <TeamSection />
       <ContactSection />
       {/* <FutureCellTherapiesSection /> */}
