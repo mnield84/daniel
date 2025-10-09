@@ -68,7 +68,8 @@ const SlidingCardsSection = () => {
           threshold={0.05}
         >
           <h2 className="text-3xl md:text-[60px] max-w-7xl font-medium text-[#4B2A4B] mb-4 font-poppins">
-            CellForge Digitizes the Development and Manufacturing of Human Cells
+            CellForge™ Digitizes the Development and Manufacturing of Human
+            Cells
           </h2>
         </AnimatedComponent>
 

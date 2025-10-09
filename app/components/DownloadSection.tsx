@@ -58,7 +58,7 @@ export default function DownloadSection() {
         </h2>
         <p className="text-[#4B2A57] text-opacity-70">
           Our scientific team is actively publishing the science behind
-          CellForge in top journals and at conferences.
+          CellForge™ in top journals and at conferences.
         </p>
         <div className="flex flex-col mt-10">
           {downloads.map((item, idx) => (

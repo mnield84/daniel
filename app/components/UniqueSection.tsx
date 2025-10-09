@@ -23,12 +23,12 @@ const cards = [
   {
     icon: cellIcon,
     title: "Generalizable",
-    desc: "CellForge can access any cell or organoid type",
+    desc: "CellForge™ can access any cell or organoid type",
   },
   {
     icon: scopeIcon,
     title: "Adaptable",
-    desc: "CellForge can use any cells as input",
+    desc: "CellForge™ can use any cells as input",
   },
 ];
 

@@ -114,7 +114,7 @@ const Navbar = () => {
                   Home
                 </a>
                 <a
-                  href="#cellforge"
+                  href="#Cellforge"
                   className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
@@ -127,17 +127,17 @@ const Navbar = () => {
                   About
                 </a>
                 <a
-                  href="#cellforge"
+                  href="#CellForge™"
                   className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
                     document
-                      .getElementById("cellforge")
+                      .getElementById("CellForge™")
                       ?.scrollIntoView({ behavior: "smooth" });
                     setIsMenuOpen(false);
                   }}
                 >
-                  CellForge
+                  CellForge™
                 </a>
                 <a
                   href="#cellatlas"
