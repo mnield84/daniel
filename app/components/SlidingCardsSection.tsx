@@ -18,7 +18,6 @@ const cards = [
     alt: "Define target cells icon",
   },
   {
-    step: "STEP 2",
     title: "Characterize biological state of starting cells",
     text: (
       <ul className="list-disc pl-4 text-left">
@@ -31,7 +30,7 @@ const cards = [
     alt: "Characterize starting cells icon",
   },
   {
-    step: "STEP 3",
+    step: "STEP 2",
     title: "AI-agent guides differentiation towards target cell state",
     text: (
       <ul className="list-disc pl-4 text-left">
@@ -43,7 +42,7 @@ const cards = [
     alt: "AI guides differentiation icon",
   },
   {
-    step: "STEP 4",
+    step: "STEP 3",
     title: "Delivery of cell product to partner specification",
     text: (
       <ul className="list-disc pl-4 text-left">
