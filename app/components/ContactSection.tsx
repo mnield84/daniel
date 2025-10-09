@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bgImage from "../assets/Rectangle-11.png";
+import bgImage from "../assets/contact-bg-image.png";
 import PaperIcon from "../assets/paper.svg";
 
 const subjects = [
@@ -19,6 +19,12 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const [subscriptionEmail, setSubscriptionEmail] = useState("");
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
 
@@ -58,6 +64,42 @@ const ContactSection = () => {
     }
   };
 
+  const handleSubscriptionSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubscribing(true);
+    setSubscriptionStatus("idle");
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/partnering@iorgan.bio",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            email: subscriptionEmail,
+            subject: "Newsletter Subscription",
+            message: "New newsletter subscription request",
+          }),
+        }
+      );
+
+      if (response.ok) {
+        setSubscriptionStatus("success");
+        setSubscriptionEmail("");
+      } else {
+        setSubscriptionStatus("error");
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setSubscriptionStatus("error");
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -73,33 +115,68 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-[80vh] flex items-center justify-center font-poppins overflow-hidden"
+      className="relative w-full min-h-[80vh] flex items-center justify-center font-poppins overflow-hidden py-20 md:py-40"
       style={{
         backgroundColor: "#230B37",
       }}
     >
-      {/* Image overlay with opacity on top of solid background */}
       <div
         className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-40 bg-center bg-cover"
         style={{
           backgroundImage: `url(${bgImage})`,
         }}
       />
-      <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto px-6 py-20 gap-12">
-        {/* Left: Heading & Text */}
-        <div className="flex flex-col md:w-1/2 w-full mb-8 md:mb-0">
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-6 text-[#ffffff]">
+      <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto px-6 gap-12">
+        <div className="flex flex-col md:w-1/2 w-full mb-8 md:mb-0 items-center md:items-start text-center md:text-left">
+          <h2 className="text-4xl md:text-6xl font-medium leading-tight mb-6 text-[#ffffff]">
             Get the precision cells your research demands
           </h2>
-          <div className="flex-1 flex flex-col text-white max-w-xl max-w-[410px]">
+          <div className="flex-1 flex flex-col text-white max-w-xl">
             <p className="text-lg opacity-80 text-[#ffffff]">
               We are bringing engineering precision to the complexity of
-              cellular biology
+              cellular biology.
             </p>
+            <p className="text-lg opacity-80 text-[#ffffff] mt-5">
+              Get the latest updates by subscribing to our newsletter.
+            </p>
+            <div className="mt-7">
+              <form
+                onSubmit={handleSubscriptionSubmit}
+                className="flex flex-col md:flex-row gap-4 items-center justify-center"
+              >
+                <input
+                  type="email"
+                  value={subscriptionEmail}
+                  onChange={(e) => setSubscriptionEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="flex-1 max-w-md px-4 py-3 rounded-full bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={isSubscribing}
+                  className={`px-8 py-3 rounded-full bg-[#4C294E] text-white font-medium hover:bg-[#5a355c] transition focus:outline-none focus:ring-2 focus:ring-pink-300 ${
+                    isSubscribing ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                >
+                  {isSubscribing ? "Subscribing..." : "Subscribe Now"}
+                </button>
+              </form>
+
+              {subscriptionStatus === "success" && (
+                <div className="text-center text-green-400 text-sm mt-2">
+                  Thank you for subscribing!
+                </div>
+              )}
+              {subscriptionStatus === "error" && (
+                <div className="text-center text-red-400 text-sm mt-2">
+                  There was an error subscribing. Please try again.
+                </div>
+              )}
+            </div>
           </div>
         </div>
-        <div className="flex-1 w-full md:w-1/2 flex justify-center">
-          {/* Right: Form */}
+        <div className="flex-1 w-full md:w-1/2 flex justify-center items-center">
           <form
             className="flex-1 bg-transparent flex flex-col gap-6 max-w-xl w-full"
             onSubmit={handleSubmit}
