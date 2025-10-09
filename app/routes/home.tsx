@@ -23,8 +23,8 @@ export default function Home() {
     <>
       <Hero />
       {/* <UniqueSection /> */}
-      <CellForgeSection />
       <SlidingCardsSection />
+      <CellForgeSection />
       <CellAtlasSection />
       <DownloadSection />
       <TeamSection />
