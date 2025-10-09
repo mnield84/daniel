@@ -36,7 +36,11 @@ const PartnersSection = () => {
           </h2>
         </AnimatedComponent>
 
-        <div className="flex flex-wrap justify-center items-center gap-12">
+        <StaggerContainer
+          animation="fadeInUp"
+          staggerDelay={0.1}
+          className="flex flex-wrap justify-center items-center gap-12"
+        >
           {partners.map((partner, index) => (
             <div key={index} className="flex items-center justify-center">
               <img
@@ -50,7 +54,7 @@ const PartnersSection = () => {
               />
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
