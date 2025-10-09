@@ -150,7 +150,7 @@ const Navbar = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  Cell Atlas
+                  CellAtlas
                 </a>
                 <a
                   href="#team"
