@@ -88,7 +88,7 @@ const Navbar = () => {
                   />
                 </motion.div>
               </div>
-              <div className="px-4 pt-2 pb-6 space-y-2 w-full">
+              <div className="px-4 pt-2 pb-6 space-y-1 w-full">
                 <button
                   className="absolute top-4 right-4 text-white text-2xl focus:outline-none"
                   onClick={() => setIsMenuOpen(false)}
@@ -98,7 +98,7 @@ const Navbar = () => {
                 </button>
                 <a
                   href="#home"
-                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -111,7 +111,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="#cellforge"
-                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -123,8 +123,47 @@ const Navbar = () => {
                   About
                 </a>
                 <a
+                  href="#cellforge"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("cellforge")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  CellForge
+                </a>
+                <a
+                  href="#cellatlas"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("cellatlas")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Cell Atlas
+                </a>
+                <a
+                  href="#team"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("team")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Our Team
+                </a>
+                <a
                   href="#partner"
-                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -133,11 +172,37 @@ const Navbar = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  Partners
+                  Investors and Partners
+                </a>
+                <a
+                  href="#news"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("news")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  News & Resources
+                </a>
+                <a
+                  href="#download"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("download")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Publications
                 </a>
                 <a
                   href="#contact"
-                  className="block px-3 py-3 rounded-md text-lg font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -146,7 +211,20 @@ const Navbar = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  Contact
+                  Partnering
+                </a>
+                <a
+                  href="#footer"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("footer")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Careers
                 </a>
               </div>
             </motion.div>

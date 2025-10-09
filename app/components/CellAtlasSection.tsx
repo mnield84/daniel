@@ -4,7 +4,10 @@ import diagram from "../assets/iOrganbio-Diagram.png";
 
 const CellAtlasSection = () => {
   return (
-    <section className="w-full py-16 bg-white flex flex-col items-center font-poppins">
+    <section
+      id="cellatlas"
+      className="w-full py-16 bg-white flex flex-col items-center font-poppins"
+    >
       <AnimatedComponent
         animation="fadeInUp"
         className="w-full px-4 sm:px-6 md:px-8 max-w-6xl"

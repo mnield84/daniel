@@ -43,7 +43,10 @@ const team = [
 
 const TeamSection = () => {
   return (
-    <section className="w-full py-20 pb-0 bg-white flex flex-col items-center font-poppins">
+    <section
+      id="team"
+      className="w-full py-20 pb-0 bg-white flex flex-col items-center font-poppins"
+    >
       <div className="max-w-6xl w-full px-4 mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-16 mb-10">
           <div className="flex-2">

@@ -2,7 +2,10 @@ import IorganbioLogo from "../assets/Iorganbio-2.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 font-poppins text-black">
+    <footer
+      id="footer"
+      className="bg-white border-t border-gray-200 font-poppins text-black"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-8 pt-12 pb-4 flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-0">
         <div className="md:w-1/3 text-black text-center md:text-left mb-4 md:mb-0">
           <p className="text-lg font-medium text-black">

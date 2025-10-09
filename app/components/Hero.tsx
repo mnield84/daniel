@@ -4,7 +4,10 @@ import AnimatedComponent from "./AnimatedComponent";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex flex-col items-center md:items-end justify-center md:justify-end overflow-hidden font-poppins">
+    <div
+      id="home"
+      className="relative min-h-screen flex flex-col items-center md:items-end justify-center md:justify-end overflow-hidden font-poppins"
+    >
       {/* Bottom Solid Purple Background */}
       <div className="absolute inset-0 w-full h-full bg-[#230B37] z-0" />
 
