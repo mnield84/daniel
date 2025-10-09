@@ -98,7 +98,7 @@ const NewsResourcesSection = () => {
         </AnimatedComponent>
 
         {/* News Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 gap-8 mb-16">
           {newsArticles.map((article, index) => (
             <AnimatedComponent
               key={article.id}
@@ -106,8 +106,8 @@ const NewsResourcesSection = () => {
               delay={index * 0.1}
             >
               <div
-                className={`flex flex-col md:flex-row gap-4 pb-6 border-b border-gray-200 last:border-b-0 md:last:border-b md:pb-6 ${
-                  index < 2 ? "border-t border-gray-200 pt-6" : ""
+                className={`flex flex-col md:flex-row gap-4 pb-6 border-b border-gray-200 last:border-b-0 ${
+                  index === 0 ? "border-t border-gray-200 pt-6" : ""
                 }`}
               >
                 {/* Article Image */}
@@ -181,7 +181,7 @@ const NewsResourcesSection = () => {
         </div>
 
         {/* Resources Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {resourceCards.map((resource, index) => (
             <AnimatedComponent
               key={resource.id}

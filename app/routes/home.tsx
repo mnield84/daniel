@@ -30,8 +30,8 @@ export default function Home() {
       <TeamSection />
       <PartnersSection />
       <NewsResourcesSection />
-      <ContactSection />
       <FutureCellTherapiesSection />
+      <ContactSection />
     </>
   );
 }
