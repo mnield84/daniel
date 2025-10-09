@@ -13,12 +13,6 @@ const Footer = () => {
         </div>
 
         <div className="md:w-1/3 flex flex-col gap-2 text-lg font-medium text-black text-center md:text-center mb-4 md:mb-0">
-          <a
-            href="mailto:contact@iorgan.bio"
-            className="hover:underline text-black"
-          >
-            contact@iorgan.bio
-          </a>
           <span>
             137 E Franklin St,
             <br />
@@ -41,14 +35,14 @@ const Footer = () => {
             Partner with Us
           </a>
 
-          {/* <a
+          <a
             href="https://iorganbio.bamboohr.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex self-center md:self-end hover:underline text-black"
           >
             Careers
-          </a> */}
+          </a>
           <a
             href="https://www.linkedin.com/company/iorganbio"
             target="_blank"
@@ -57,18 +51,6 @@ const Footer = () => {
           >
             LinkedIn
           </a>
-          <div
-            id="BambooHR"
-            data-domain="iorganbio.bamboohr.com"
-            data-version="1.0.0"
-            data-departmentId=""
-          ></div>
-          <script
-            src="https://iorganbio.bamboohr.com/js/embed.js"
-            type="text/javascript"
-            async
-            defer
-          ></script>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-8 pb-8 pt-8 flex flex-col gap-4 md:gap-2">
