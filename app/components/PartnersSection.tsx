@@ -10,51 +10,48 @@ import secondstarLogo from "../assets/partners/2ndF.png";
 import capeFearBiosciencesLogo from "../assets/partners/CapeFearBiocapital.png";
 
 const partners = [
-  { src: firststarLogo, alt: "First Star" },
-  { src: indi, alt: "INDI" },
-  { src: capeFearBiosciencesLogo, alt: "Cape Fear Biosciences" },
-  { src: secondstarLogo, alt: "2nd Star" },
-  { src: fullstackedLogo, alt: "Fullstacked Terasaki Institute" },
-  { src: alix, alt: "Alix" },
+  { src: firststarLogo, alt: "First Star", height: "75px" },
+  { src: indi, alt: "INDI", height: "62.5px" },
+  {
+    src: capeFearBiosciencesLogo,
+    alt: "Cape Fear Biosciences",
+    height: "50px",
+  },
+  { src: secondstarLogo, alt: "2nd Star", height: "68.75px" },
+  {
+    src: fullstackedLogo,
+    alt: "Fullstacked Terasaki Institute",
+    height: "62.5px",
+  },
+  { src: alix, alt: "Alix", height: "60px" },
 ];
 
 const PartnersSection = () => {
   return (
-    <section
-      id="partner"
-      className="w-full py-16 bg-white flex flex-col items-center"
-    >
-      {/* Top border */}
-      <div className="w-full max-w-[300px] sm:max-w-[700px] lg:max-w-[1000px] h-px bg-gray-200 mb-20 mt-2" />
+    <section id="partner" className="w-full py-16 bg-white">
+      <div className="w-full max-w-6xl mx-auto px-4 py-8 md:py-16 border-t border-b border-gray-200 flex flex-col items-center">
+        <AnimatedComponent animation="fadeInUp">
+          <h2 className="text-center text-gray-400 text-[18px] font-medium mb-12 tracking-wide uppercase">
+            OUR INVESTORS AND PARTNERS
+          </h2>
+        </AnimatedComponent>
 
-      <AnimatedComponent animation="fadeInUp">
-        <h2 className="text-center text-gray-400 text-[18px] font-medium mb-12 tracking-wide uppercase">
-          OUR INVESTORS AND PARTNERS
-        </h2>
-      </AnimatedComponent>
-
-      <div className="flex flex-col gap-4 items-center">
-        <StaggerContainer
-          animation="fadeInUp"
-          staggerDelay={0.1}
-          className="flex flex-row justify-center gap-4 sm:gap-8 max-w-[1000px] items-center"
-        >
+        <div className="flex flex-wrap justify-center items-center gap-12">
           {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="h-16 sm:h-20 w-[180px] flex items-center justify-center"
-            >
+            <div key={index} className="flex items-center justify-center">
               <img
                 src={partner.src}
                 alt={partner.alt}
-                className="grayscale opacity-80 hover:opacity-100 transition duration-200 max-h-full max-w-full object-contain"
+                className="grayscale opacity-80 hover:opacity-100 transition duration-200 object-contain"
+                style={{
+                  height: partner.height,
+                  width: "auto",
+                }}
               />
             </div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
-      {/* Bottom border */}
-      <div className="w-full max-w-[300px] sm:max-w-[700px] lg:max-w-[1000px] h-px bg-gray-200 mt-20 mb-2" />
     </section>
   );
 };
