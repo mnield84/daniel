@@ -142,10 +142,10 @@ const SlidingCardsSection = () => {
               key={card.step}
               className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col items-center snap-start shadow-md md:min-w-[350px] md:max-w-[380px] flex-1 h-full"
             >
-              <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest">
+              <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest text-left w-full">
                 {card.step}
               </span>
-              <h3 className="text-xl font-medium text-[#4B2A4B] text-center mb-4 flex-shrink-0">
+              <h3 className="text-xl text-left font-medium text-[#4B2A4B] text-center mb-4 flex-shrink-0">
                 {card.title}
               </h3>
               <img
