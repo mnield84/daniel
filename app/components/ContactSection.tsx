@@ -132,10 +132,6 @@ const ContactSection = () => {
             Get the precision cells your research demands
           </h2>
           <div className="flex-1 flex flex-col text-white max-w-xl">
-            <p className="text-lg opacity-80 text-[#ffffff]">
-              We are bringing engineering precision to the complexity of
-              cellular biology.
-            </p>
             <p className="text-lg opacity-80 text-[#ffffff] mt-5">
               Get the latest updates by subscribing to our newsletter.
             </p>
