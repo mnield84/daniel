@@ -23,7 +23,7 @@ const partners = [
     alt: "Fullstacked Terasaki Institute",
     height: "62.5px",
   },
-  { src: alix, alt: "Alix", height: "60px" },
+  { src: alix, alt: "Alix", height: "50px" },
 ];
 
 const PartnersSection = () => {
