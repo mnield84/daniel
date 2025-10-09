@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import segmentAsset from "../assets/segment.svg";
+// import segmentAsset from "../assets/segment.svg";
+const segmentAsset = "/assets/segment.svg";
 import scope from "../assets/unique/scope.svg";
 import gen from "../assets/unique/gen.svg";
 import scalable from "../assets/unique/scalable.svg";
