@@ -52,15 +52,15 @@ const TeamSection = () => {
           <div className="flex-2">
             <AnimatedComponent animation="fadeInUp">
               <h2 className="text-3xl md:text-5xl font-medium text-[#4B2A4B] text-left leading-tight">
-                Meet our Team
+                Meet Our Team
               </h2>
             </AnimatedComponent>
           </div>
           <div className="flex-1">
             <AnimatedComponent animation="fadeInUp" delay={0.2}>
               <p className="text-gray-500 text-base md:text-lg  max-w-2xl text-left">
-                A multidisciplinary team of engineers, scientists, and
-                entrepreneurs leading the next chapter of biotechnology.
+                Scientists, engineers and company builders defining what's next
+                in biotechnology.
               </p>
             </AnimatedComponent>
           </div>
