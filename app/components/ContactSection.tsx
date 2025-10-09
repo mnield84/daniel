@@ -89,7 +89,7 @@ const ContactSection = () => {
         {/* Left: Heading & Text */}
         <div className="flex flex-col md:w-1/2 w-full mb-8 md:mb-0">
           <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-6 text-[#ffffff]">
-            Let us supply the exact cells you need
+            Get the precision cells your research demands
           </h2>
           <div className="flex-1 flex flex-col text-white max-w-xl max-w-[410px]">
             <p className="text-lg opacity-80 text-[#ffffff]">
