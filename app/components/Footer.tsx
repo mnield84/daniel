@@ -39,7 +39,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/company/iorganbio/jobs/?viewAsMember=true"
+            href="https://www.linkedin.com/jobs/iorganbio-jobs-worldwide?f_C=107422952&trk=top-card_top-card-primary-button-top-card-primary-cta&position=1&pageNum=0"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex self-center md:self-end hover:underline text-black"
