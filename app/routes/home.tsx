@@ -29,7 +29,7 @@ export default function Home() {
       <DownloadSection />
       <TeamSection />
       <ContactSection />
-      {/* <FutureCellTherapiesSection /> */}
+      <FutureCellTherapiesSection />
     </>
   );
 }
