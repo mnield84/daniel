@@ -234,7 +234,7 @@ export default function CellForgeSection({
                         } as React.CSSProperties
                       }
                     >
-                      <div className="mb-1 md:mb-3 inline-flex h-6 w-6 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#2E2030] border-2 border-[#fff]">
+                      <div className="mb-1 md:mb-3 inline-flex h-6 w-6 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#47284D] border-2 border-[#fff]">
                         <img
                           src={s.icon}
                           alt=""
