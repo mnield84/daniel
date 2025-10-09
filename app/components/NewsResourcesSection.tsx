@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import AnimatedComponent from "./AnimatedComponent";
 import newsImage1 from "../assets/news/news-image-1.png";
 import newsImage2 from "../assets/news/news-image-2.png";
@@ -14,8 +14,7 @@ const newsArticles = [
     title:
       "iOrganBio Launches CellForge™ Platform to Transform Cell Manufacturing",
     image: newsImage1,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    url: "https://placeholder-news-1.com",
   },
   {
     id: 2,
@@ -24,8 +23,7 @@ const newsArticles = [
     title:
       "Prof. Shuibing Chen Publishes Breakthrough Paper on Stem Cell Differentiation",
     image: newsImage2,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    url: "https://placeholder-news-2.com",
   },
   {
     id: 3,
@@ -33,8 +31,7 @@ const newsArticles = [
     label: "Media Coverage",
     title: "iOrganBio Secures First Strategic Pharma Collaboration",
     image: newsImage3,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    url: "https://placeholder-news-3.com",
   },
   {
     id: 4,
@@ -43,8 +40,7 @@ const newsArticles = [
     title:
       "iOrganBio Expands Advisory Board with Global Leaders in Biotechnology",
     image: newsImage4,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    url: "https://placeholder-news-4.com",
   },
 ];
 
@@ -54,35 +50,18 @@ const resourceCards = [
     label: "Read Resource",
     title:
       "FDA Announces Plan to Phase Out Animal Testing Requirement for Monoclonal Antibodies and Other Drugs",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    url: "https://placeholder-resource-1.com",
   },
   {
     id: 2,
     label: "Read Resource",
     title:
       "The ISSCR Launches Consortium to Support Adoption of Stem Cell-Derived Disease Models for Drug Discovery and Development (May 2025).",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    url: "https://placeholder-resource-2.com",
   },
 ];
 
 const NewsResourcesSection = () => {
-  const [expandedArticles, setExpandedArticles] = useState<number[]>([]);
-  const [expandedResources, setExpandedResources] = useState<number[]>([]);
-
-  const toggleArticle = (id: number) => {
-    setExpandedArticles((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-  };
-
-  const toggleResource = (id: number) => {
-    setExpandedResources((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-  };
-
   return (
     <section id="news" className="w-full bg-white py-16 md:py-24 font-poppins">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
@@ -106,7 +85,7 @@ const NewsResourcesSection = () => {
               delay={index * 0.1}
             >
               <div
-                className={`flex flex-col md:flex-row gap-4 pb-6 border-b border-gray-200 last:border-b-0 ${
+                className={`flex flex-col md:flex-row gap-4 pb-6 border-b border-gray-200 ${
                   index === 0 ? "border-t border-gray-200 pt-6" : ""
                 }`}
               >
@@ -130,40 +109,19 @@ const NewsResourcesSection = () => {
                     {article.title}
                   </h3>
 
-                  {/* Expandable Content */}
-                  <AnimatePresence>
-                    {expandedArticles.includes(article.id) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {article.content}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  {/* Clickable Arrow */}
+                  {/* Clickable Arrow Link */}
                   <div className="flex justify-end mt-3">
-                    <button
-                      onClick={() => toggleArticle(article.id)}
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-pink-400 hover:text-pink-300 transition-colors group"
                     >
-                      <motion.svg
+                      <svg
                         className="w-5 h-5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
-                        animate={{
-                          rotate: expandedArticles.includes(article.id)
-                            ? 180
-                            : 0,
-                        }}
-                        transition={{ duration: 0.3 }}
                       >
                         <path
                           strokeLinecap="round"
@@ -171,8 +129,8 @@ const NewsResourcesSection = () => {
                           strokeWidth={2}
                           d="M7 17L17 7M17 7H7M17 7V17"
                         />
-                      </motion.svg>
-                    </button>
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -196,39 +154,18 @@ const NewsResourcesSection = () => {
                   {resource.title}
                 </h3>
 
-                {/* Expandable Content */}
-                <AnimatePresence>
-                  {expandedResources.includes(resource.id) && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden mb-4"
-                    >
-                      <p className="text-gray-200 text-sm leading-relaxed">
-                        {resource.content}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-
                 <div className="flex justify-end">
-                  <button
-                    onClick={() => toggleResource(resource.id)}
+                  <a
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-pink-400 hover:text-pink-300 transition-colors"
                   >
-                    <motion.svg
+                    <svg
                       className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      animate={{
-                        rotate: expandedResources.includes(resource.id)
-                          ? 180
-                          : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
                     >
                       <path
                         strokeLinecap="round"
@@ -236,8 +173,8 @@ const NewsResourcesSection = () => {
                         strokeWidth={2}
                         d="M7 17L17 7M17 7H7M17 7V17"
                       />
-                    </motion.svg>
-                  </button>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </AnimatedComponent>
