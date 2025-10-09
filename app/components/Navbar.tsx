@@ -30,8 +30,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             <Link
               to="#partner"
-              className="hidden md:block text-pink-300 text-17px underline font-poppins decoration-2 decoration-pink-300 underline-offset-4 hover:text-pink-200 transition"
-              style={{ paddingBottom: 2 }}
+              className="hidden md:block"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -39,7 +38,12 @@ const Navbar = () => {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Partner With Us
+              <button className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-white/10 text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md">
+                <span className="hidden md:inline text-white">
+                  Partner With Us
+                </span>
+                <span className="md:hidden text-white">Partner</span>
+              </button>
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
