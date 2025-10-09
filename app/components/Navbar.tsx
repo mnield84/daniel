@@ -38,7 +38,7 @@ const Navbar = () => {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              <button className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-white/10 text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md">
+              <button className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#D745B2] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md">
                 <span className="hidden md:inline text-white">
                   Partner With Us
                 </span>
