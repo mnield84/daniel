@@ -9,6 +9,7 @@ import FutureCellTherapiesSection from "../components/FutureCellTherapiesSection
 import ContactSection from "../components/ContactSection";
 import UniqueSection from "../components/UniqueSection";
 import DownloadSection from "../components/DownloadSection";
+import NewsResourcesSection from "../components/NewsResourcesSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -28,6 +29,7 @@ export default function Home() {
       <PartnersSection />
       <DownloadSection />
       <TeamSection />
+      <NewsResourcesSection />
       <ContactSection />
       <FutureCellTherapiesSection />
     </>
