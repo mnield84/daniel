@@ -3,51 +3,62 @@ import arrow from "../assets/arrow.svg";
 
 const downloads = [
   {
-    title: "ChemperturbSeq paper June 24 2025",
-    subtitle: "Shuibing, June 24 2025",
+    title:
+      "ChemPerturb-seq screen identifies a small molecule cocktail enhancing human beta cell survival after subcutaneous transplantation. ",
+    subtitle: "Cell Stem Cell, August 2025",
     href: "https://www.cell.com/cell-stem-cell/abstract/S1934-5909(25)00224-3",
+    date: "August 2025",
+  },
+  {
+    title:
+      "Human vascularized macrophage-islet organoids to model immune-mediated pancreatic β cell pyroptosis upon viral infection",
+    subtitle: "Cell Stem Cell, November 2024",
+    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(24)00293-5",
+    date: "November 2024",
+  },
+  {
+    title:
+      "An Immuno-Cardiac Model for Macrophage-Mediated Inflammation in COVID-19 Hearts",
+    subtitle: "Circulation Research, April 2021",
+    href: "https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.121.319060",
+    date: "April 2021",
   },
   {
     title:
       "Induced organoids derived from patients with ulcerative colitis recapitulate colitic reactivity",
-    subtitle: "Nature Communications, January 2021",
+    subtitle: "Nature Communicationsm January 2021",
     href: "https://www.nature.com/articles/s41467-020-20351-5",
-  },
-  {
-    title:
-      "Colonic organoids derived from human induced pluripotent stem cells for modeling colorectal cancer and drug testing",
-    subtitle: "Nature Medicine, June 2017",
-    href: "https://www.nature.com/articles/nm.4355",
-  },
-  {
-    title:
-      "A Modular Platform for Differentiation of Human PSCs into All Major Ectodermal Lineages",
-    subtitle: "Cell Stem Cell, September 2017",
-    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(17)30333-8",
-  },
-  {
-    title:
-      "A human pluripotent stem cell–based platform to study SARS-CoV-2 tropism and model virus infection in human cells and organoids",
-    subtitle: "Cell Stem Cell, July 2020",
-    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(20)30282-4",
+    date: "January 2021",
   },
   {
     title:
       "Identification of SARS-CoV-2 inhibitors using lung and colonic organoids",
     subtitle: "Nature, August 2020",
     href: "https://www.nature.com/articles/s41586-020-2901-9",
+    date: "2020-08-01",
   },
   {
-    title: "An Immuno-cardiac Model for macrophage-mediated inflammation",
-    subtitle: "Circulation research, 2021",
-    href: "https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.121.319060",
+    title:
+      "A Human Pluripotent Stem Cell-based Platform to Study SARS-CoV-2 Tropism and Model Virus Infection in Human Cells and Organoids",
+    subtitle: "Cell Stem Cell, July 2020",
+    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(20)30282-4",
+    date: "2020-07-01",
   },
   {
-    title: "Human vascularized macrophage–islet organoids",
-    subtitle: "Cell Stem Cell, November 2024",
-    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(24)00293-5",
+    title:
+      "A Modular Platform for Differentiation of Human PSCs into All Major Ectodermal Lineages",
+    subtitle: "Cell Stem Cell, September 2017",
+    href: "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(17)30333-8",
+    date: "2017-09-01",
   },
-];
+  {
+    title:
+      "Colonic organoids derived from human induced pluripotent stem cells for modeling colorectal cancer and drug testing",
+    subtitle: "Nature Medicine, June 2017",
+    href: "https://www.nature.com/articles/nm.4355",
+    date: "2017-06-01",
+  },
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export default function DownloadSection() {
   return (
