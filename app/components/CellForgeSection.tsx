@@ -154,13 +154,14 @@ export default function CellForgeSection({
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
           <h2 className="mb-4 text-center text-3xl font-medium text-[#4B2A4B] md:text-4xl">
-            CellForge: Accelerating Breakthroughs Through AI-Powered Cell
+            CellForge™: Accelerating Breakthroughs Through AI-Powered Cell
             Manufacturing
           </h2>
           <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-600">
-            You have bold ideas. We have the cells to match your pace. CellForge
-            uses AI-powered manufacturing to produce reliable, ready-to-use
-            cells when you need them so your projects never wait on production.
+            You have bold ideas. We have the cells to match your pace.
+            CellForge™ uses AI-powered manufacturing to produce reliable,
+            ready-to-use cells when you need them so your projects never wait on
+            production.
           </p>
 
           <div className="relative mx-auto aspect-square w-full max-w-[1000px]">
@@ -185,7 +186,7 @@ export default function CellForgeSection({
                 className="font-bold"
                 style={{ fontSize: 48, fill: colors.centerText }}
               >
-                CellForge
+                CellForge™
               </text>
             </svg>
 

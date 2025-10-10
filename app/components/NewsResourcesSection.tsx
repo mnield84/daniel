@@ -1,63 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedComponent from "./AnimatedComponent";
-import newsImage1 from "../assets/news/news-image-1.png";
-import newsImage2 from "../assets/news/news-image-2.png";
-import newsImage3 from "../assets/news/news-image-3.png";
-import newsImage4 from "../assets/news/news-image-4.png";
+import IorganbioLogo from "../assets/Iorganbio-2.svg";
 
 const newsArticles = [
   {
     id: 1,
-    date: "April 15, 2025",
+    date: "October XX, 2025",
     label: "Press Release",
     title:
-      "iOrganBio Launches CellForge™ Platform to Transform Cell Manufacturing",
-    image: newsImage1,
-    url: "https://placeholder-news-1.com",
-  },
-  {
-    id: 2,
-    date: "May 2, 2025",
-    label: "Resource",
-    title:
-      "Prof. Shuibing Chen Publishes Breakthrough Paper on Stem Cell Differentiation",
-    image: newsImage2,
-    url: "https://placeholder-news-2.com",
-  },
-  {
-    id: 3,
-    date: "June 10, 2025",
-    label: "Media Coverage",
-    title: "iOrganBio Secures First Strategic Pharma Collaboration",
-    image: newsImage3,
-    url: "https://placeholder-news-3.com",
-  },
-  {
-    id: 4,
-    date: "July 22, 2025",
-    label: "Press Release",
-    title:
-      "iOrganBio Expands Advisory Board with Global Leaders in Biotechnology",
-    image: newsImage4,
-    url: "https://placeholder-news-4.com",
+      "iOrganBio Emerges from Stealth with $2 Million Pre-Seed Financing and Launches CellForge, the First AI-Powered Digitized Cell Manufacturing Platform",
+    image: IorganbioLogo,
+    url: "https://placeholder-business-wire.com",
   },
 ];
 
 const resourceCards = [
   {
     id: 1,
-    label: "Read Resource",
+    date: "September 25, 2025",
+    label: "Resource",
     title:
-      "FDA Announces Plan to Phase Out Animal Testing Requirement for Monoclonal Antibodies and Other Drugs",
-    url: "https://placeholder-resource-1.com",
+      "NIH establishes nation's first dedicated organoid development center to reduce reliance on animal modeling",
+    url: "https://www.nih.gov/news-events/news-releases/nih-establishes-nations-first-dedicated-organoid-development-center-reduce-reliance-animal-modeling",
   },
   {
     id: 2,
-    label: "Read Resource",
+    date: "April 10, 2025",
+    label: "Resource",
     title:
-      "The ISSCR Launches Consortium to Support Adoption of Stem Cell-Derived Disease Models for Drug Discovery and Development (May 2025).",
-    url: "https://placeholder-resource-2.com",
+      "FDA Announces Plan to Phase Out Animal Testing Requirement for Monoclonal Antibodies and Other Drugs",
+    url: "https://www.fda.gov/news-events/press-announcements/fda-announces-plan-phase-out-animal-testing-requirement-monoclonal-antibodies-and-other-drugs",
+  },
+  {
+    id: 3,
+    date: "May 27, 2025",
+    label: "Resource",
+    title:
+      "The ISSCR Launches Consortium to Support Adoption of Stem Cell-Derived Disease Models for Drug Discovery and Development",
+    url: "https://www.isscr.org/isscr-news/isscr-launches-consortium-to-support-adoption-of-stem-cell-derived-disease-models-for-drug-discovery-and-development",
   },
 ];
 
@@ -76,7 +57,6 @@ const NewsResourcesSection = () => {
           </h2>
         </AnimatedComponent>
 
-        {/* News Articles Grid */}
         <div className="grid grid-cols-1 gap-8 mb-16">
           {newsArticles.map((article, index) => (
             <AnimatedComponent
@@ -89,16 +69,14 @@ const NewsResourcesSection = () => {
                   index === 0 ? "border-t border-gray-200 pt-6" : ""
                 }`}
               >
-                {/* Article Image */}
-                <div className="flex-shrink-0">
+                <div className="flex justify-center items-center border-2 border-gray-200 rounded-lg">
                   <img
                     src={article.image}
                     alt={article.title}
-                    className="w-full md:w-48 h-32 object-cover rounded-lg"
+                    className="w-32 rounded-lg"
                   />
                 </div>
 
-                {/* Article Content */}
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <p className="text-sm text-gray-500">{article.date}</p>
@@ -109,7 +87,6 @@ const NewsResourcesSection = () => {
                     {article.title}
                   </h3>
 
-                  {/* Clickable Arrow Link */}
                   <div className="flex justify-end mt-3">
                     <a
                       href={article.url}
@@ -147,9 +124,11 @@ const NewsResourcesSection = () => {
               delay={0.4 + index * 0.1}
             >
               <div className="bg-[#4B2A4B] p-6 rounded-lg hover:bg-[#5a355c] transition-colors group">
-                <p className="text-sm text-gray-300 uppercase tracking-wide mb-3">
-                  {resource.label}
-                </p>
+                <div className="flex items-center gap-2 mb-3">
+                  <p className="text-sm text-gray-300">{resource.date}</p>
+                  <span className="text-xs text-gray-400">•</span>
+                  <p className="text-sm text-gray-300">{resource.label}</p>
+                </div>
                 <h3 className="text-lg font-medium text-white leading-tight mb-4">
                   {resource.title}
                 </h3>
