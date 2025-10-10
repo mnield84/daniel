@@ -37,10 +37,13 @@ export default function UniqueSection() {
     <section className="py-12 md:py-20 bg-white w-full font-poppins px-4 sm:px-6 md:px-8">
       <AnimatedComponent animation="fadeInUp" className="text-center">
         <h2 className="text-4xl md:text-5xl font-medium text-center text-[#47284D] mb-4">
-          What Makes iOrganBio Unique
+          CellForge™: Accelerating Breakthroughs Through AI-Powered Cell
+          Manufacturing
         </h2>
         <p className="text-center text-[#2A222A] mb-12 max-w-2xl mx-auto text-lg">
-          This is programmable cell manufacturing.
+          You have bold ideas. We have the cells to match your pace. CellForge™
+          uses AI-powered manufacturing to produce reliable, ready-to-use cells
+          when you need them so your projects never wait on production.
         </p>
       </AnimatedComponent>
 
