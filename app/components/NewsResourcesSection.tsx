@@ -83,9 +83,16 @@ const NewsResourcesSection = () => {
                     <span className="text-xs text-gray-400">•</span>
                     <p className="text-sm text-gray-500">{article.label}</p>
                   </div>
-                  <h3 className="text-lg md:text-xl font-medium text-[#4B2A4B] leading-tight mb-4">
-                    {article.title}
-                  </h3>
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="text-lg md:text-xl font-medium text-[#4B2A4B] leading-tight mb-4 hover:text-pink-400 transition-colors">
+                      {article.title}
+                    </h3>
+                  </a>
 
                   <div className="flex justify-end mt-3">
                     <a
@@ -123,25 +130,25 @@ const NewsResourcesSection = () => {
               animation="fadeInUp"
               delay={0.4 + index * 0.1}
             >
-              <div className="bg-[#4B2A4B] p-6 rounded-lg hover:bg-[#5a355c] transition-colors group">
-                <div className="flex items-center gap-2 mb-3">
-                  <p className="text-sm text-gray-300">{resource.date}</p>
-                  <span className="text-xs text-gray-400">•</span>
-                  <p className="text-sm text-gray-300">{resource.label}</p>
-                </div>
-                <h3 className="text-lg font-medium text-white leading-tight mb-4">
-                  {resource.title}
-                </h3>
+              <a
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-[#4B2A4B] p-6 rounded-lg hover:bg-[#5a355c] transition-colors group cursor-pointer">
+                  <div className="flex items-center gap-2 mb-3">
+                    <p className="text-sm text-gray-300">{resource.date}</p>
+                    <span className="text-xs text-gray-400">•</span>
+                    <p className="text-sm text-gray-300">{resource.label}</p>
+                  </div>
+                  <h3 className="text-lg font-medium text-white leading-tight mb-4">
+                    {resource.title}
+                  </h3>
 
-                <div className="flex justify-end">
-                  <a
-                    href={resource.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-pink-400 hover:text-pink-300 transition-colors"
-                  >
+                  <div className="flex justify-end">
                     <svg
-                      className="w-5 h-5"
+                      className="w-5 h-5 text-pink-400 group-hover:text-pink-300 transition-colors"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -153,9 +160,9 @@ const NewsResourcesSection = () => {
                         d="M7 17L17 7M17 7H7M17 7V17"
                       />
                     </svg>
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             </AnimatedComponent>
           ))}
         </div>
