@@ -2,16 +2,16 @@ import React from "react";
 import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 // Import partner logos
-import fullstackedLogo from "../assets/partners/TerasakiInst.png";
+import fullstackedLogo from "../assets/partners/Fullstacked-Terasaki-Institute.png";
 import firststarLogo from "../assets/partners/FirstStar.png";
-import indi from "../assets/partners/indiebio.png";
+import indi from "../assets/partners/IndieBiologoOutlinedLogo.png";
 import alix from "../assets/partners/Alix.png";
 import secondstarLogo from "../assets/partners/2ndF.png";
 import capeFearBiosciencesLogo from "../assets/partners/CapeFearBiocapital.png";
 
 const partners = [
   { src: firststarLogo, alt: "First Star", height: "75px" },
-  { src: indi, alt: "INDI", height: "62.5px" },
+  { src: indi, alt: "INDI", height: "50.5px" },
   {
     src: capeFearBiosciencesLogo,
     alt: "Cape Fear Biosciences",
@@ -21,7 +21,7 @@ const partners = [
   {
     src: fullstackedLogo,
     alt: "Fullstacked Terasaki Institute",
-    height: "62.5px",
+    height: "50.5px",
   },
   { src: alix, alt: "Alix", height: "50px" },
 ];
@@ -29,7 +29,7 @@ const partners = [
 const PartnersSection = () => {
   return (
     <section id="partner" className="w-full py-16 bg-white">
-      <div className="w-full max-w-6xl mx-auto px-4 py-8 md:py-16 border-t border-b border-gray-200 flex flex-col items-center">
+      <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-16 border-t border-b border-gray-200 flex flex-col items-center">
         <AnimatedComponent animation="fadeInUp">
           <h2 className="text-center text-gray-400 text-[18px] font-medium mb-12 tracking-wide uppercase">
             OUR INVESTORS AND PARTNERS
