@@ -7,28 +7,28 @@ import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 const cards = [
   {
     icon: cellIcon,
-    title: "Digitally Defined Cell Profile",
-    desc: "Every batch meets a fully defined biological profile",
+    title: "Definability",
+    desc: "Establishing exact target characteristics through a digitally defined cell profile.",
   },
   {
     icon: scopeIcon,
-    title: "Reproducible",
-    desc: "Every batch meets the desired profile",
+    title: "Reproducibility",
+    desc: "Achieving consistent target profiles to reduce batch-to-batch variability.",
   },
   {
     icon: bubbleIcon,
-    title: "Scalable",
-    desc: "iOB can deliver desired cells at unprecedented volume",
+    title: "Scalability",
+    desc: "Expanding from small-scale experiments to high-volume production for clinical and commercial needs.",
   },
   {
     icon: cellIcon,
-    title: "Generalizable",
-    desc: "CellForge™ can access any cell or organoid type",
+    title: "Generalizability",
+    desc: "Developing diverse cell types to broaden access to advanced models and therapies.",
   },
   {
     icon: scopeIcon,
-    title: "Adaptable",
-    desc: "CellForge™ can use any cells as input",
+    title: "Adaptability",
+    desc: "Using multiple cell sources to enable rapid adjustment to new applications.",
   },
 ];
 
@@ -69,14 +69,20 @@ export default function UniqueSection() {
                   backgroundSize: "100% 100%",
                 }}
               />
-              <div className="relative flex flex-col items-center justify-center h-full px-6 py-10">
-                <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
-                  <img src={card.icon} alt="" className="w-10 h-10" />
+              <div className="relative flex flex-col items-center justify-start h-full px-6 py-10">
+                <div className="flex flex-col items-center  md:mt-[20%] mb-4">
+                  <div className="md:w-[100px] md:h-[100px] w-[70px] h-[70px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-[10px]">
+                    <img
+                      src={card.icon}
+                      alt=""
+                      className="md:w-10 md:h-10 w-7 h-7"
+                    />
+                  </div>
+                  <h3 className="text-xl font-medium text-center text-[#2D1B2F]">
+                    {card.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-medium text-center mb-0 sm:mb-2 text-[#2D1B2F] w-full">
-                  {card.title}
-                </h3>
-                <p className="text-[14px] sm:text-[16px] text-center text-[#3A2C3F] h-[62px] w-full flex items-center justify-center px-8">
+                <p className="text-[14px] sm:text-[16px] text-center text-[#3A2C3F] px-8">
                   {card.desc}
                 </p>
               </div>
@@ -103,13 +109,19 @@ export default function UniqueSection() {
                 }}
               />
               <div className="relative flex flex-col items-center justify-center h-full px-6 py-10">
-                <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-4">
-                  <img src={card.icon} alt="" className="w-10 h-10" />
+                <div className="flex flex-col items-center mb-4">
+                  <div className="md:w-[100px] md:h-[100px] w-[70px] h-[70px] flex items-center justify-center rounded-full bg-[#47284D] shadow-lg ring-2 ring-[#E5D8F3] mb-[10px]">
+                    <img
+                      src={card.icon}
+                      alt=""
+                      className="md:w-10 md:h-10 w-7 h-7"
+                    />
+                  </div>
+                  <h3 className="text-xl font-medium text-center text-[#2D1B2F]">
+                    {card.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-medium text-center mb-0 sm:mb-2 text-[#2D1B2F] w-full">
-                  {card.title}
-                </h3>
-                <p className="text-[14px] sm:text-[16px] text-center text-[#3A2C3F] text-base h-[62px] w-full flex items-center justify-center px-8">
+                <p className="text-[14px] sm:text-[16px] text-center text-[#3A2C3F] px-8">
                   {card.desc}
                 </p>
               </div>
