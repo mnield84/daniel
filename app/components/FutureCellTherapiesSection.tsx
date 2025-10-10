@@ -14,8 +14,8 @@ const FutureCellTherapiesSection = () => {
         </div>
         <p className="text-[black] opacity-60 text-lg md:text-xl text-center max-w-4xl mb-10">
           Whether you're pioneering new treatments, advancing diagnostics, or
-          investing in the next biotech platform — Let's Build the Future of
-          Cell Therapies Together
+          investing in the next biotech platform —{" "}
+          <strong>Let's Build the Future of Cell Therapies Together</strong>
         </p>
         <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
           <a
