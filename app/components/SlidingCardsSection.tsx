@@ -10,7 +10,7 @@ const cards = [
     title: "Define target cells",
     text: (
       <ul className="list-disc pl-4 text-left">
-        <li>Select from IORGANBIO's in-vivo Functional Human CellAtlas</li>
+        <li>Select from IORGANBIO's in-vivo Functional Human CellAtlas™</li>
         <li>Provide cells or cell characteristics</li>
       </ul>
     ),
