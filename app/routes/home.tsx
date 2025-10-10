@@ -22,9 +22,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <UniqueSection /> */}
+
       <SlidingCardsSection />
-      <CellForgeSection />
+      {/* <CellForgeSection /> */}
+      <UniqueSection />
       <CellAtlasSection />
       <DownloadSection />
       <TeamSection />
