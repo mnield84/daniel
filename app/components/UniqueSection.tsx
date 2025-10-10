@@ -36,15 +36,18 @@ export default function UniqueSection() {
   return (
     <section className="py-12 md:py-20 bg-white w-full font-poppins px-4 sm:px-6 md:px-8">
       <AnimatedComponent animation="fadeInUp" className="text-center">
-        <h2 className="text-4xl md:text-5xl font-medium text-center text-[#47284D] mb-4">
-          CellForge™: Accelerating Breakthroughs Through AI-Powered Cell
-          Manufacturing
-        </h2>
-        <p className="text-center text-[#2A222A] mb-12 max-w-2xl mx-auto text-lg">
-          You have bold ideas. We have the cells to match your pace. CellForge™
-          uses AI-powered manufacturing to produce reliable, ready-to-use cells
-          when you need them so your projects never wait on production.
-        </p>
+        <div className="mb-12 text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-medium text-[#4B2A4B] mb-4">
+            CellForge™: Accelerating Breakthroughs Through AI-Powered Cell
+            Manufacturing
+          </h2>
+          <p className="text-center text-[#2A222A] mb-12 max-w-2xl mx-auto text-lg">
+            You have bold ideas. We have the cells to match your pace.
+            CellForge™ uses AI-powered manufacturing to produce reliable,
+            ready-to-use cells when you need them so your projects never wait on
+            production.
+          </p>
+        </div>
       </AnimatedComponent>
 
       <div className="flex flex-col items-center gap-0 w-full">

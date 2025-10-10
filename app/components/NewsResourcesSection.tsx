@@ -46,11 +46,6 @@ const NewsResourcesSection = () => {
   return (
     <section id="news" className="w-full bg-white py-16 md:py-24 font-poppins">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-        {/* Section Title */}
-        <h4 className="text-gray-500 text-sm mb-3">
-          (all content in this section is placeholder. Cleint to provide actual
-          content)
-        </h4>
         <AnimatedComponent animation="fadeInUp">
           <h2 className="text-3xl md:text-4xl font-medium text-[#4B2A4B] mb-12">
             News and Resources
