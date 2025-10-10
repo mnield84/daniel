@@ -17,11 +17,9 @@ const Footer = () => {
 
         <div className="md:w-1/3 flex flex-col gap-2 text-lg font-medium text-black text-center md:text-center mb-4 md:mb-0">
           <span>
-            137 E Franklin St,
+            137 E Franklin St, Suite 300
             <br />
-            Suite 300
-            <br />
-            Chapel Hill NC 27714
+            Chapel Hill, NC 27514
           </span>
         </div>
         <div className="md:w-1/3 flex flex-col gap-2 text-lg font-medium items-center md:items-end text-black">
