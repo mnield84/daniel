@@ -106,7 +106,7 @@ export default function CellForgeSection({
     },
     {
       id: 5,
-      title: "Digitally Defined Cell Profile",
+      title: "Digitally Defined",
       description: "Every batch meets a fully defined biological profile",
       icon: gen,
       topOffset: 190,
@@ -238,11 +238,11 @@ export default function CellForgeSection({
                         } as React.CSSProperties
                       }
                     >
-                      <div className="mb-1 md:mb-3 inline-flex h-6 w-6 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#47284D] border-2 border-[#fff]">
+                      <div className="mb-1 md:mb-3 inline-flex h-8 w-8 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#47284D] border-2 border-[#fff]">
                         <img
                           src={s.icon}
                           alt=""
-                          className="h-3 w-3 md:h-6 md:w-6"
+                          className="h-5 w-5 md:h-8 md:w-8"
                           draggable={false}
                         />
                       </div>
