@@ -148,7 +148,10 @@ export default function CellForgeSection({
           }
         }
       `}</style>
-      <section className="w-full bg-white py-16 font-poppins md:py-24">
+      <section
+        id="cellforge"
+        className="w-full bg-white py-16 font-poppins md:py-24"
+      >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
           <h2 className="mb-4 text-center text-3xl font-medium text-[#4B2A4B] md:text-4xl">
             CellForge: Accelerating Breakthroughs Through AI-Powered Cell
