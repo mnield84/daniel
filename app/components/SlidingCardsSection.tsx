@@ -1,7 +1,8 @@
 import React from "react";
 import group1 from "../assets/Group.svg";
-import group2 from "../assets/Group2.svg";
+import group2 from "../assets/unique/dna-2.svg";
 import group3 from "../assets/group3.svg";
+import group4 from "../assets/unique/clone.svg";
 import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 const cards = [
@@ -40,6 +41,7 @@ const cards = [
     ),
     icon: group3,
     alt: "AI guides differentiation icon",
+    customIconSize: "medium",
   },
   {
     step: "STEP 3",
@@ -52,8 +54,9 @@ const cards = [
         </li>
       </ul>
     ),
-    icon: group1,
+    icon: group4,
     alt: "AI guides differentiation icon",
+    customIconSize: "large",
   },
 ];
 
@@ -94,44 +97,46 @@ const SlidingCardsSection = () => {
         >
           <div
             key="step1-2"
-            className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col snap-start shadow-md md:min-w-[350px] md:max-w-[380px] h-full"
+            className="min-w-[300px] max-w-[320px] bg-[#F7F1F7] rounded-2xl p-6 flex flex-col snap-start shadow-md md:min-w-[350px] md:max-w-[380px] h-full justify-between"
           >
             {/* STEP 1 (top half) */}
-            <div className="relative w-full flex-1 flex flex-col">
+            <div className="relative w-full flex-1 flex flex-col pb-8">
               <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest block">
                 {cards[0].step}
               </span>
-              <h3 className="text-xl font-medium text-[#4B2A4B] mb-3">
+              <h3 className="text-[22px] font-medium text-[#4B2A4B] mb-3">
                 {cards[0].title}
               </h3>
               <img
                 src={cards[0].icon}
                 alt={cards[0].alt}
-                className="w-14 h-14 absolute top-0 right-0 opacity-90"
+                className="w-14 h-14 absolute top-0 right-0 opacity-90 rotate-45"
               />
-              <div className="text-[#6d5a7b] text-sm">{cards[0].text}</div>
+              <div className="text-[#6d5a7b] text-[16px]">{cards[0].text}</div>
             </div>
 
             {/* STEP 2 (bottom half) */}
-            <div className="grid grid-cols-[auto,1fr] gap-4 items-start w-full flex-1 border-t border-[#E2D6E2] pt-6 mt-6">
+            <div className="grid grid-cols-[auto,1fr] gap-4 items-start w-full flex-1 border-t border-[#E2D6E2] pt-8">
               <div className="flex justify-between">
                 <img
                   src={cards[1].icon}
                   alt={cards[1].alt}
-                  className="w-12 h-12 mt-1"
+                  className="w-12 h-12 mt-1 rotate-45"
                 />
-                <div className="flex flex-col max-w-[200px]">
+                <div className="flex flex-col max-w-[230px]">
                   <span className="text-xs text-[#7a5c8a] tracking-widest block">
                     {cards[1].step}
                   </span>
-                  <h4 className="text-lg font-medium text-[#4B2A4B] mb-3">
+                  <h3 className="text-[22px] font-medium text-[#4B2A4B] mb-3">
                     {cards[1].title}
-                  </h4>
+                  </h3>
                 </div>
               </div>
 
               <div>
-                <div className="text-[#6d5a7b] text-sm">{cards[1].text}</div>
+                <div className="text-[#6d5a7b] text-[16px]">
+                  {cards[1].text}
+                </div>
               </div>
             </div>
           </div>
@@ -145,16 +150,22 @@ const SlidingCardsSection = () => {
               <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest text-left w-full">
                 {card.step}
               </span>
-              <h3 className="text-xl text-left font-medium text-[#4B2A4B] text-center mb-4 flex-shrink-0">
+              <h3 className="text-[22px] text-left font-medium text-[#4B2A4B] text-center mb-4 flex-shrink-0">
                 {card.title}
               </h3>
               <img
                 src={card.icon}
                 alt={card.alt}
-                className="w-20 h-20 my-5 mb-10 flex-shrink-0"
+                className={
+                  card.customIconSize === "large"
+                    ? "w-40 h-40 my-5 mb-10 flex-shrink-0"
+                    : card.customIconSize === "medium"
+                    ? "w-24 h-24 my-5 mb-10 flex-shrink-0"
+                    : "w-20 h-20 my-5 mb-10 flex-shrink-0"
+                }
               />
               {card.text ? (
-                <div className="text-[#6d5a7b] text-sm text-center w-full flex-1 flex items-end">
+                <div className="text-[#6d5a7b] text-[16px] text-center w-full flex-1 flex items-end">
                   {card.text}
                 </div>
               ) : null}
