@@ -127,12 +127,12 @@ const Navbar = () => {
                   About
                 </a>
                 <a
-                  href="#cellforge"
+                  href="#unique"
                   className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-pink-300 hover:bg-white/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
                     document
-                      .getElementById("cellforge")
+                      .getElementById("unique")
                       ?.scrollIntoView({ behavior: "smooth" });
                     setIsMenuOpen(false);
                   }}

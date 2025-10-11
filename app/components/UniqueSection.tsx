@@ -37,7 +37,10 @@ const cards = [
 
 export default function UniqueSection() {
   return (
-    <section className="py-12 md:py-20 bg-white w-full font-poppins px-4 sm:px-6 md:px-8">
+    <section
+      id="unique"
+      className="py-12 md:py-20 bg-white w-full font-poppins px-4 sm:px-6 md:px-8"
+    >
       <AnimatedComponent animation="fadeInUp" className="text-center">
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-medium text-[#4B2A4B] mb-4">
