@@ -1,34 +1,37 @@
 import React from "react";
 import cellIcon from "../assets/unique/cell.svg";
-import bubbleIcon from "../assets/unique/bubble.svg";
-import scopeIcon from "../assets/unique/scope.svg";
+import digitalIcon from "../assets/unique/digital.svg";
+import genIcon from "../assets/unique/gener.svg";
+import scalableIcon from "../assets/unique/sca.svg";
+import adaptIcon from "../assets/unique/adapt.svg";
 import AnimatedComponent, { StaggerContainer } from "./AnimatedComponent";
 
 const cards = [
   {
-    icon: cellIcon,
+    icon: digitalIcon,
     title: "Definability",
     desc: "Establishing exact target characteristics through a digitally defined cell profile.",
   },
   {
-    icon: scopeIcon,
+    icon: cellIcon,
     title: "Reproducibility",
     desc: "Achieving consistent target profiles to reduce batch-to-batch variability.",
   },
   {
-    icon: bubbleIcon,
+    icon: scalableIcon,
     title: "Scalability",
     desc: "Expanding from small-scale experiments to high-volume production for clinical and commercial needs.",
   },
   {
-    icon: cellIcon,
+    icon: genIcon,
     title: "Generalizability",
     desc: "Developing diverse cell types to broaden access to advanced models and therapies.",
   },
   {
-    icon: scopeIcon,
+    icon: adaptIcon,
     title: "Adaptability",
     desc: "Using multiple cell sources to enable rapid adjustment to new applications.",
+    customIconSize: true,
   },
 ];
 
@@ -75,7 +78,11 @@ export default function UniqueSection() {
                     <img
                       src={card.icon}
                       alt=""
-                      className="md:w-10 md:h-10 w-7 h-7"
+                      className={
+                        card.customIconSize
+                          ? "md:w-14 md:h-14 w-10 h-10"
+                          : "md:w-10 md:h-10 w-7 h-7"
+                      }
                     />
                   </div>
                   <h3 className="text-xl font-medium text-center text-[#2D1B2F]">
@@ -114,7 +121,11 @@ export default function UniqueSection() {
                     <img
                       src={card.icon}
                       alt=""
-                      className="md:w-10 md:h-10 w-7 h-7"
+                      className={
+                        card.customIconSize
+                          ? "md:w-14 md:h-14 w-10 h-10"
+                          : "md:w-10 md:h-10 w-7 h-7"
+                      }
                     />
                   </div>
                   <h3 className="text-xl font-medium text-center text-[#2D1B2F]">
