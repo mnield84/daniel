@@ -14,7 +14,7 @@ const CellAtlasSection = () => {
       >
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-medium text-[#4B2A4B] mb-4">
-            CellAtlas™, Digital Profiles of In-vivo Cells and Tissues
+            CellAtlas™: Digital Profiles of In-vivo Cells and Tissues
           </h2>
           <p className="text-lg text-[#4B2A4B] leading-relaxed max-w-4xl mx-auto">
             A searchable database to explore adult human biology, benchmark
