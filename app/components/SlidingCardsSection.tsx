@@ -104,7 +104,7 @@ const SlidingCardsSection = () => {
               <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest block">
                 {cards[0].step}
               </span>
-              <h3 className="text-[22px] font-medium text-[#4B2A4B] mb-3">
+              <h3 className="md:text-[22px] text-[18px] font-medium text-[#4B2A4B] mb-3">
                 {cards[0].title}
               </h3>
               <img
@@ -121,13 +121,13 @@ const SlidingCardsSection = () => {
                 <img
                   src={cards[1].icon}
                   alt={cards[1].alt}
-                  className="w-12 h-12 mt-1 rotate-45"
+                  className="md:w-12 md:h-12 w-10 h-10 mt-1 rotate-45"
                 />
                 <div className="flex flex-col max-w-[230px]">
                   <span className="text-xs text-[#7a5c8a] tracking-widest block">
                     {cards[1].step}
                   </span>
-                  <h3 className="text-[22px] font-medium text-[#4B2A4B] mb-3">
+                  <h3 className="md:text-[22px] text-[18px] font-medium text-[#4B2A4B] mb-3 ml-5">
                     {cards[1].title}
                   </h3>
                 </div>
@@ -150,7 +150,7 @@ const SlidingCardsSection = () => {
               <span className="text-xs text-[#7a5c8a] font-regular mb-2 tracking-widest text-left w-full">
                 {card.step}
               </span>
-              <h3 className="text-[22px] text-left font-medium text-[#4B2A4B] text-center mb-4 flex-shrink-0">
+              <h3 className="md:text-[22px] text-[18px] text-left font-medium text-[#4B2A4B] text-center mb-4 flex-shrink-0">
                 {card.title}
               </h3>
               <img
