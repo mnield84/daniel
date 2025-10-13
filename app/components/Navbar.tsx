@@ -29,7 +29,7 @@ const Navbar = () => {
           {/* Right side: Partner With Us and Menu button */}
           <div className="flex items-center space-x-6">
             <button
-              className="hidden md:flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#D745B2] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
+              className="hidden md:flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#CD7ED7] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
               onClick={(e) => {
                 e.preventDefault();
                 document
