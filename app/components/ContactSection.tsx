@@ -114,7 +114,7 @@ const ContactSection = () => {
 
   return (
     <section
-      id="contact"
+      id="contact-form"
       className="relative w-full min-h-[80vh] flex items-center justify-center font-poppins overflow-hidden py-20 md:py-40"
       style={{
         backgroundColor: "#230B37",

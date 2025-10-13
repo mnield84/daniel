@@ -27,7 +27,7 @@ const FutureCellTherapiesSection = () => {
             onClick={(e) => {
               e.preventDefault();
               document
-                .getElementById("contact")
+                .getElementById("contact-form")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
