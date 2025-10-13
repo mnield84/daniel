@@ -28,9 +28,8 @@ const Navbar = () => {
 
           {/* Right side: Partner With Us and Menu button */}
           <div className="flex items-center space-x-6">
-            <Link
-              to="#partner"
-              className="hidden md:block"
+            <button
+              className="hidden md:flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#D745B2] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -38,13 +37,11 @@ const Navbar = () => {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              <button className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-[#D745B2] text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md">
-                <span className="hidden md:inline text-white">
-                  Partner With Us
-                </span>
-                <span className="md:hidden text-white">Partner</span>
-              </button>
-            </Link>
+              <span className="hidden md:inline text-white">
+                Partner With Us
+              </span>
+              <span className="md:hidden text-white">Partner</span>
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="flex items-center justify-center w-12 h-12 md:w-auto md:h-auto md:px-6 md:py-4 rounded-full bg-white/10 text-white text-lg font-regular focus:outline-none focus:ring-2 focus:ring-pink-300 hover:bg-[#3a2a3a] transition shadow-md"

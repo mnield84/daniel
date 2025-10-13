@@ -30,8 +30,14 @@ const Footer = () => {
             Contact
           </a>
           <a
-            href="#partner"
+            href="#contact"
             className="inline-flex self-center md:self-end hover:underline text-black"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Partner with Us
           </a>

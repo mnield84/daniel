@@ -3,7 +3,10 @@ import CellAsset from "../assets/basophil-white-blood-cells-with-transparency-me
 
 const FutureCellTherapiesSection = () => {
   return (
-    <section className="relative w-full flex flex-col items-center justify-center pt-20 pb-70 bg-[#F7F3F8] font-poppins overflow-hidden">
+    <section
+      id="contact"
+      className="relative w-full flex flex-col items-center justify-center pt-20 pb-70 bg-[#F7F3F8] font-poppins overflow-hidden"
+    >
       <div className="z-10 flex flex-col items-center justify-center w-full px-4">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-[#4B2A4B] text-4xl md:text-6xl font-medium text-center leading-tight mb-4 max-w-[1100px]">
