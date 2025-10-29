@@ -6,12 +6,12 @@ import IorganbioLogo from "../assets/Iorganbio-2.svg";
 const newsArticles = [
   {
     id: 1,
-    date: "October XX, 2025",
+    date: "October 29, 2025",
     label: "Press Release",
     title:
       "iOrganBio Emerges from Stealth with $2 Million Pre-Seed Financing and Launches CellForge, the First AI-Powered Digitized Cell Manufacturing Platform",
     image: IorganbioLogo,
-    url: "https://placeholder-business-wire.com",
+    url: "https://www.businesswire.com/news/home/20251029644221/en/iOrganBio-Emerges-from-Stealth-with-%242M-and-Launches-CellForge-the-First-AI-Powered-Cell-Manufacturing-Platform",
   },
 ];
 
