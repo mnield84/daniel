@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar3 from "../assets/team/Avatar3.png";
 import Avatar4 from "../assets/team/Avatar4.png";
-import Avatar5 from "../assets/team/Avatar5.png";
+import Avatar5 from "../assets/team/xiling.jpg";
 // Use real team photos
 import Philippe from "../assets/team/philippe.jpg";
 import Jenn from "../assets/team/jenn.jpg";
